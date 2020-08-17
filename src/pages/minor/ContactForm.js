@@ -36,7 +36,7 @@ class ContactForm extends React.Component {
   render() {
       const { name, email, message } = this.state;
       return (
-        <form onSubmit={this.handleSubmit} netlify>
+        <form onSubmit={this.handleSubmit} action="POST" data-netlify="true" netlify>
           <p>
             <label>
               Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
