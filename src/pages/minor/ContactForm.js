@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css'
-import * as Util from './Util'
+import { Redirect } from "react-router-dom";
+const contactLogo = require('../media/contactLogo.png')
 
 function encode(data) {
   return Object.keys(data)
@@ -11,7 +12,7 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {submitted: false, redirect: null};
   }
 
   handleChange = e => {
@@ -29,18 +30,25 @@ export default class Contact extends React.Component {
         ...this.state
       })
     })
-      .then(() => alert("nice!"))
+      .then(() => {
+        this.setState({submitted: true})
+        setTimeout(function(){
+          this.setState({redirect: "/"})
+        }.bind(this), 6000);
+         } )
       .catch(error => alert(error));
   };
 
   render() {
-    return (
-      <div>
-        <h1>Contact</h1>
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />
+    }
+    return !this.state.submitted ? (
+      <div className="centerDiv">
         <form
           name="contact"
           method="post"
-          action="/thanks/"
+          action="/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
@@ -55,13 +63,15 @@ export default class Contact extends React.Component {
           </p>
           <p>
             <label>
-              Your name:<br />
+              Name:
+              <br></br>
               <input type="text" name="name" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
-              Your email:<br />
+              Email:
+              <br></br>
               <input type="email" name="email" onChange={this.handleChange} />
             </label>
           </p>
@@ -72,9 +82,25 @@ export default class Contact extends React.Component {
             </label>
           </p>
           <p>
-            <button type="submit">Send</button>
+            <button type="submit" className="submitBtn">Send</button>
           </p>
         </form>
+        <div className="contactCard">
+          
+          
+
+        </div>
+      </div>
+    )
+    :
+    (
+      <div className="centerDiv">
+        <center>
+          <br></br>
+          <img src={contactLogo} alt="thanks!" className="contactLogo"></img>
+          <h1 className="submitted">thanks, your message was sent!</h1>  
+        </center>
+       
       </div>
     );
   }
