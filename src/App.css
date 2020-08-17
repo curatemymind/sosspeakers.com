@@ -171,10 +171,95 @@ li a:hover {
   text-align:center;
 }
 
+.centerDiv {
+  width: 600px;
+  margin: 0 auto;
+}
 .logoDesktop {
   width: 250px;
   height: auto;
 }
+
+form{
+  font-size: 18px;
+  float: left;
+  margin-left: 35px;
+}
+
+input {
+  width: 150px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #f8f8f8;
+}
+
+label {
+  margin-left: 1px;
+}
+
+textarea {
+  width: 300px;
+  height: 200px;
+  resize: none;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #f8f8f8;
+}
+
+.submitBtn {
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #f8f8f8;
+  
+}
+
+.contactCard {
+  background-color: #9e84ae;
+  width: 200px;
+  height: 425px;
+  box-sizing: border-box;
+
+  margin-top: 5px;
+  float: right;
+  margin-right: 35px;
+}
+
+.icon {
+  float: left;
+  width: 30px;
+}
+
+.invisiButton {
+  width: 200px;
+  height: 75px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.contactLogo {
+  position: relative;
+  -webkit-animation:spin 6s linear infinite;
+    -moz-animation:spin 6s linear infinite;
+    animation:spin 6s linear infinite;
+  width: 200px;
+}
+.btnText {
+  font-size: 20px;
+  float: center;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 @media only screen and (min-width: 400px) and (max-width: 600px)
 {
   .contentWrapper {
