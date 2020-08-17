@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
+import ContactForm from './minor/ContactForm';
 
 class Contact extends React.Component { 
 
@@ -20,6 +21,7 @@ class Contact extends React.Component {
       <div>
         <Navigation></Navigation>
         <div className="contentWrapper">  
+        <ContactForm></ContactForm>
         </div>
       </div>
     )              
