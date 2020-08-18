@@ -181,13 +181,16 @@ li a:hover {
 }
 
 form{
-  font-size: 18px;
   float: left;
+  width: 300px;
+  font-size: 18px;
+  border-radius: 8px;
   margin-left: 35px;
 }
 
 input {
-  width: 150px;
+  width: 230px;
+  font-size: 15px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 6px;
@@ -200,6 +203,7 @@ label {
 }
 
 textarea {
+  font-size: 15px;
   width: 300px;
   height: 200px;
   resize: none;
@@ -221,7 +225,6 @@ textarea {
 }
 
 .contactCard {
-  background-color: #9e84ae;
   width: 200px;
   height: 425px;
   box-sizing: border-box;
@@ -252,20 +255,68 @@ textarea {
   width: 200px;
 }
 .btnText {
-  font-size: 20px;
-  float: center;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 2px;
 }
+
+.contactLogo2 {
+  margin-top: 40px;
+  width: 200px;
+}
+
+
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-@media only screen and (min-width: 400px) and (max-width: 600px)
+@media only screen and (min-width: 100px) and (max-width: 600px)
 {
   .contentWrapper {
     min-width: 325px;
     width: auto;
     height: auto;
     max-height: 570px;
+  }
+  textarea {
+    width: 270px;
+    height: 200px;
+    resize: none;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  input {width: 270px;}
+  .centerDiv {
+    width: 325px;
+    margin: 0 auto;
+  }
+
+  .contactLogo {
+    position: relative;
+    -webkit-animation:spin 6s linear infinite;
+      -moz-animation:spin 6s linear infinite;
+      animation:spin 6s linear infinite;
+    width: 100px;
+  }
+  
+  form {
+    width: 100px !important;
+  }
+
+  .contactCard {
+    margin-top: 0px;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .contactLogo2 {
+    margin-top: 0px;
   }
 }
