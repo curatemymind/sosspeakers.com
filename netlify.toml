@@ -1,7 +1,8 @@
 [build]
   base = ""
-  command = "CI= npm run build"
+  command = "CI= npm run prod"
   publish="/build"
+  functions = "lambda"
 
 [[redirects]]
   from = "/*"
