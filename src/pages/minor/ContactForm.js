@@ -54,7 +54,6 @@ export default class Contact extends React.Component {
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
-          <input type="hidden" id="subject" name="subject" value="'Contact Us' Form via Netlify"></input>
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
