@@ -254,6 +254,14 @@ textarea {
     animation:spin 6s linear infinite;
   width: 200px;
 }
+
+.aboutLogo {
+  float: left;
+  width: 230px;
+  margin-top: 60px;
+  margin-left: 25px;
+  padding-bottom: 30px;
+}
 .btnText {
   color: black;
   font-size: 16px;
@@ -266,6 +274,16 @@ textarea {
   margin-top: 40px;
   width: 200px;
 }
+
+.aboutHead {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+.aboutText {margin-left: 10px; margin-bottom: 0px; margin-top: 0px;}
+
+.aboutWrap {float: right;}
+
 
 
 
@@ -318,5 +336,28 @@ textarea {
 
   .contactLogo2 {
     margin-top: 0px;
+    
   }
+
+  .aboutLogo {
+    /*manual centering*/
+    float: none;
+    width: 200px;
+    
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-left: 62.5px;
+  }
+
+  .aboutText {
+    font-size: 15px;
+    margin-left: 0px;
+  }
+
+  .aboutHead {
+    margin-left: 0;
+  }
+
+
+.aboutWrap {float: none; margin-left: 22px;}
 }
