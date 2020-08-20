@@ -1,4 +1,11 @@
-import { parse } from 'querystring'
+
+exports.handler = function(event, context, callback) {
+  // your server-side functionality
+  return {statusCode: 200,
+    headerConst,
+    body: "great"}
+}
+/*import { parse } from 'querystring'
 const fetch = require("node-fetch").default;
 
 const headerConst = {
@@ -56,7 +63,7 @@ exports.handler = async function (event, context) {
     },
     data: JSON.stringify(),
     success: good(),
-  });*/
+  });
 
   fetch(url, {
     method: 'POST', // or 'PUT'
@@ -82,7 +89,7 @@ exports.handler = async function (event, context) {
   
   
 }
-
+*/
 //authorization header BEARER oauth token 
 
 //post to that url there with payload.to_json
