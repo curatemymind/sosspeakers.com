@@ -1,5 +1,5 @@
 import { parse } from 'querystring'
-const fetch = require("node-fetch").default;
+//const fetch = require("node-fetch").default;
 
 const headerConst = {
   'Access-Control-Allow-Origin': '*',
