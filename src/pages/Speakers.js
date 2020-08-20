@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
-import TestFunc from './minor/TestFunc'
+import PaymentPage from './minor/PaymentPage'
+
 class Speakers extends React.Component { 
 
   //the states of emotion and source will be set to null initially until the user had filled out the form.
@@ -20,7 +21,7 @@ class Speakers extends React.Component {
       <div>
         <Navigation></Navigation>
         <div className="contentWrapper">  
-        <TestFunc></TestFunc>
+        <PaymentPage></PaymentPage>
        
         </div>
       </div>
