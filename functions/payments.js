@@ -7,7 +7,7 @@ const headerConst = {
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
 };
 
-exports.handler = function (event, context, callback) {
+exports.handler = async function (event, context) {
   'use strict';
   
 
@@ -72,11 +72,10 @@ exports.handler = function (event, context, callback) {
   
   
     
-  callback( null,
-       {statusCode: 200,
+  return {statusCode: 200,
       headerConst,
       body: "great"}
-    )  
+    
   
   
   
