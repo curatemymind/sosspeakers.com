@@ -20,6 +20,7 @@
     "react-square-payment-form": "^0.6.3",
     "stripe": "^8.88.0",
     "jquery": "^3.5.1"
+    
   },
   "scripts": {
     "start": "react-scripts start",
