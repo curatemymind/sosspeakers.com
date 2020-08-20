@@ -32,7 +32,7 @@ class PaymentPage extends React.Component {
     
     let data = {nonce: nonce, token: buyerVerificationToken}
   
-    fetch('http://localhost:52094/.netlify/functions/payments', {
+    fetch('https://sosspeakers.com/.netlify/functions/payments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
