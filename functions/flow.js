@@ -2,24 +2,31 @@ const stripe = require('stripe')('sk_test_51HDDkWEhI2c5jgt0V2LrkkrzvR5Q0DaNjK2l0
 
 
 exports.handler = async ( event, context) => { 
-
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card'],
-    line_items: [{
-      price_data: {
-        currency: 'usd',
-        product_data: {
-          name: 'T-shirt',
+  if (event.httpMethod !== 'POST') {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [{
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'T-shirt',
+          },
+          unit_amount: 2000,
         },
-        unit_amount: 2000,
-      },
-      quantity: 1,
-    }],
-    mode: 'payment',
-    success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
-    cancel_url: 'https://example.com/cancel',
-  });
+        quantity: 1,
+      }],
+      mode: 'payment',
+      success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+      cancel_url: 'https://example.com/cancel',
+    });
 
 
-  return { statusCode : 200 , body : JSON.stringify({sessionId: session.id})};
+    return { statusCode : 200 ,  headers: {
+      'Access-Control-Allow-Origin': 'cheese',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Methods': '*',
+      'Access-Control-Allow-Credentials': 'true',
+    
+            }, body : JSON.stringify({sessionId: session.id})};}
  }

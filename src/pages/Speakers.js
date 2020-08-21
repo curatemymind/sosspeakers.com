@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
-import PaymentPage from './minor/PaymentPage'
+import StripeCheckout from './minor/StripeCheckout'
 
 class Speakers extends React.Component { 
 
@@ -21,7 +21,7 @@ class Speakers extends React.Component {
       <div>
         <Navigation></Navigation>
         <div className="contentWrapper">  
-        <PaymentPage></PaymentPage>
+        <StripeCheckout></StripeCheckout>
        
         </div>
       </div>
