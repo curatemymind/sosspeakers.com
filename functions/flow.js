@@ -28,5 +28,5 @@ exports.handler = async ( event, context) => {
       'Access-Control-Allow-Methods': '*',
       'Access-Control-Allow-Credentials': 'true',
     
-            }, body : JSON.stringify({sessionId: session.id})};}
+            }, body : JSON.stringify({session})};}
  }

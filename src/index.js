@@ -18,7 +18,7 @@ const routing = (
       <Route exact path="/queue" component={Queue}/>  
       <Route exact path="/contact" component={Contact}/> 
       <Route exact path="/about" component={About}/>   
-      <Route exact path="/*" component={Speakers}/>  
+      
     </Switch>
   </Router>
 )
