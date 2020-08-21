@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.SANBOX_SECRET_KEY)//'sk_test_51HDDkWEhI2c5jgt0V2LrkkrzvR5Q0DaNjK2l0l0YRI0mfS0M7mOmeMYO4dTsw313jZQDiszQ8HCbCuNUNb4Y3Wuc00Va204Y4I');
+const stripe = require('stripe')(process.env.REACT_APP_SANDBOX_SECRET_KEY);
 
 
 exports.handler = async ( event, context) => { 
