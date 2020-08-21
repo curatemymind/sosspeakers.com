@@ -16,7 +16,7 @@ exports.handler = async ( event, context) => {
         quantity: 1,
       }],
       mode: 'payment',
-      success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+      success_url: 'https://sosspeakers.com/contact',
       cancel_url: 'https://example.com/cancel',
     });
 
