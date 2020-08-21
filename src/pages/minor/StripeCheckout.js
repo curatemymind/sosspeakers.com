@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
-const stripePromise = loadStripe('pk_test_51HDDkWEhI2c5jgt0V2LrkkrzvR5Q0DaNjK2l0l0YRI0mfS0M7mOmeMYO4dTsw313jZQDiszQ8HCbCuNUNb4Y3Wuc00Va204Y4I');
+const stripePromise = loadStripe(process.env.REACT_APP_SANDBOX_PUBLISHABLE_KEY);
 
 class StripeCheckout extends React.Component {
 
