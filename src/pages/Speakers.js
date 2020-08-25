@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
 import StripeCheckout from './minor/StripeCheckout'
+import PublicArray from './minor/PublicArray'
 
 class Speakers extends React.Component { 
 
@@ -22,6 +23,7 @@ class Speakers extends React.Component {
         <Navigation></Navigation>
         <div className="contentWrapper">  
         <StripeCheckout></StripeCheckout>
+        <PublicArray></PublicArray>
        
         </div>
       </div>
