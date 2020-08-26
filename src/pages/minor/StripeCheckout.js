@@ -33,7 +33,6 @@ class StripeCheckout extends React.Component {
       return response.json();
       }).then(function(responseJson) {
         const sessionId = responseJson.session.id;
-        alert(sessionId)
         stripe.redirectToCheckout({sessionId: sessionId})
         // Call stripe.redirectToCheckout() with the Session ID.
       });

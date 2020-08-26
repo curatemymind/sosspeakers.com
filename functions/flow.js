@@ -26,12 +26,5 @@ exports.handler = async ( event, context) => {
     });
 
 
-    return { statusCode : 200 ,  headers: {
-      'Access-Control-Allow-Origin': 'cheese',
-      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Methods': '*',
-      'Access-Control-Allow-Credentials': 'true',
-    
-            }, body : JSON.stringify({session})};}
+    return { statusCode : 200, body : JSON.stringify({session})};}
  }
