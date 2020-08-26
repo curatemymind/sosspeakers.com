@@ -22,7 +22,6 @@ class Speakers extends React.Component {
       <div>
         <Navigation></Navigation>
         <div className="contentWrapper">  
-        <StripeCheckout></StripeCheckout>
         <PublicArray></PublicArray>
        
         </div>

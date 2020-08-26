@@ -11,7 +11,7 @@ class PublicArray extends React.Component {
     this.state = {
       errorMessages: [],
       sessioniId: null,
-      items: [],
+      items: null,
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -20,62 +20,66 @@ class PublicArray extends React.Component {
   {
     var allProducts = null
     let self = this
+    var tempStruct = []
     var response = fetch(`/.netlify/functions/allProducts`).then(function(response) {
       return response.json();
       }).then(function(responseJson) {
-        for(var i = 0; i < responseJson.length; i++)
-        {
-          alert(responseJson[i].NAME)
-          for(var j = 0; j < (responseJson[i].LINKS).length; j++)
-          {
-            if(responseJson[i].LINKS[j]['BOOKSHELF + DELIVERY'])
-            {
-
-            }
-            else if(responseJson[i].LINKS[j]['BOOKSHELF + SHIPPING'])
-            {
-
-            }
-            else if(responseJson[i].LINKS[j]['PORTABLE + DELIVERY'])
-            {
-
-            }
-            else if(responseJson[i].LINKS[j]['PORTABLE + SHIPPING'])
-            {
-
-            }
-            else
-            {
-              alert("error")
-            }
-          }
-        }
-        
-        //self.setState({items: JSON.stringify(responseJson)})
+        self.setState({items: JSON.stringify(responseJson)})
       });
       
     }
       
     
-
-  
-
-  handleClick = async (event) => {
-    
-    
-  };
+    async handleClick(priceId) {
+      const stripe = await stripePromise
+     fetch("/.netlify/functions/productCheckout", {
+      method: "POST", 
+      body: priceId
+    }).then(function(response) {
+      return response.json();
+      }).then(function(responseJson) {
+        const sessionId = responseJson.session.id;
+        console.log(sessionId)
+        stripe.redirectToCheckout({sessionId: sessionId})
+      });
+    }
 
   render() {
-    
+    const items = []
+    if(this.state.items != null)
+    {
+      var parsedObj = JSON.parse(this.state.items)
+      for(const [index, value] of parsedObj.entries())
+      {
+        items.push(<h1 key={index}>{value.NAME}</h1>)
+        items.push(<img src={value.PHOTO} alt="product image" width="400"></img>)
+        items.push(<h2 key={index}>{value.DESCRIPTION}</h2>)
+
+        
+        for(var i = 0; i < (value.LINKS).length; i++)
+        {
+          for(var key in value.LINKS[i])
+          {
+            if((key !== "PRICE") && (key !== "PRICEid"))
+            {
+              //0 index is ALWAYS product id
+              //1 index is ALWAYS price id
+              //2 index is ALWAYS price
+              items.push(<button key={i} value={value.LINKS[i][key][1]} onClick={e => this.handleClick(e.target.value)}>{key} (${value.LINKS[i][key][2]})</button>)            }
+            
+
+          }
+            
+        }
+      }
+    }
     
     
     
     return (
       <div className="centerDiv">
-        {this.state.items}
-      <ul>
-        
-      </ul>
+       
+      {items}
         
       </div>
     )
