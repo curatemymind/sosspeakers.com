@@ -97,9 +97,6 @@ class PublicArray extends React.Component {
     
     
     
-    
-    
-    
     return (
       <div className="centerDiv">
        
