@@ -4,7 +4,8 @@ import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import Select from 'react-select';
 const stripePromise = loadStripe(process.env.REACT_APP_SANDBOX_PUBLISHABLE_KEY);
-
+var pricesDict = []
+const items = []
 
 class PublicArray extends React.Component {
 
@@ -21,9 +22,12 @@ class PublicArray extends React.Component {
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
+  
 
-  handleChange = (selectedOption, selectedPrice) => {
-    this.setState({selectedOption: selectedOption, price: selectedPrice})
+  handleChange = (index, productId, priceAmount) => {
+    items[index][7] = productId
+    
+    //this.setState({selectedOption: selectedOption, price: selectedPrice})
   }
 
   componentDidMount()
@@ -39,13 +43,15 @@ class PublicArray extends React.Component {
       });
       
     }
-      
+      //pass in product id and search for it in item
     
     async handleClick(priceId) {
+      var buyItem = items[priceId][7]
+      alert(buyItem)
       const stripe = await stripePromise
      fetch("/.netlify/functions/productCheckout", {
       method: "POST", 
-      body: priceId
+      body: buyItem
     }).then(function(response) {
       return response.json();
       }).then(function(responseJson) {
@@ -56,9 +62,9 @@ class PublicArray extends React.Component {
     }
 
   render() {
-    const items = []
+    
     const { selectedOption } = this.state;
-    var pricesDict = []
+
     
     if(this.state.items != null)
     {
@@ -66,6 +72,7 @@ class PublicArray extends React.Component {
       
       for(const [index, value] of parsedObj.entries())
       {
+        
         var name= (<h1 key={index}>{value.NAME}</h1>)
         var img = <img src={value.PHOTO} alt="product image" width="400"></img>
         var desc = <h2 key={index}>{value.DESCRIPTION}</h2>
@@ -86,11 +93,11 @@ class PublicArray extends React.Component {
           }  
         }
         var test = null
-        var select = <Select  onChange={(e) => this.handleChange(e.value, e.price)} options={dropList}></Select>
+        var select = <Select onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>
         var amount = <h1>{this.state.price}</h1>
-        var productId = <h2>{this.state.selectedOption}</h2>
-        var buyNow = <button value={dropList[2]}  onClick={e => this.handleClick(selectedOption)}>Buy Now {/*dropList[0].value*/}</button>
-        items.push([name, img, desc, select, amount, productId, buyNow])
+        var productId = <h2>{JSON.stringify(dropList)}</h2>
+        var buyNow = <button /*value={dropList[2]}*/  onClick={e => this.handleClick(index)}>Buy Now</button>
+        items.push([name, img, desc, select, amount, productId, buyNow, ""])
       }
       
     }
@@ -101,6 +108,8 @@ class PublicArray extends React.Component {
       <div className="centerDiv">
        
       {items[0]}
+
+
       {items[1]}
       
       </div>
