@@ -89,7 +89,6 @@ class PublicArray extends React.Component {
     //DO NOT TOUCH
     async handleClick(index) {
       var buyItem = items[index][5]
-      alert(buyItem)
       const stripe = await stripePromise
      fetch("/.netlify/functions/productCheckout", {
       method: "POST", 
@@ -128,9 +127,9 @@ class PublicArray extends React.Component {
             dropList.push({value: value.LINKS[i][key][1], label: key, price: value.LINKS[i][key][2]})
           }  
         }
-        var select = <Select onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>
+        var select = <Select defaultValue={dropList[0]} onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>
         var buyNow = <button onClick={e => this.handleClick(index)}>Buy Now</button>
-        items.push([name, img, desc, select, buyNow, "", ""])
+        items.push([name, img, desc, select, buyNow, dropList[0].value])
         
       }
       
@@ -142,8 +141,14 @@ class PublicArray extends React.Component {
        {this.state.inventory.map((price, index) =>
        /*correctly sets it individually to the first value*/
           <div>
+            {items[index][0]}
+            {items[index][1]}
+            {items[index][2]}
+            {items[index][3]}
             <h1>${price[0][1]}</h1>
-            {items[index]}
+            {items[index][4]}
+
+            
           </div>
        )}
       </div>
