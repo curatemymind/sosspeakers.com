@@ -89,7 +89,6 @@ class PublicArray extends React.Component {
     //DO NOT TOUCH
     async handleClick(index) {
       var buyItem = items[index][5]
-      alert(buyItem)
       const stripe = await stripePromise
      fetch("/.netlify/functions/productCheckout", {
       method: "POST", 
@@ -112,9 +111,24 @@ class PublicArray extends React.Component {
       for(const [index, value] of parsedObj.entries())
       {
         
-        var name= (<h1 key={index}>{value.NAME}</h1>)
-        var img = <img src={value.PHOTO} alt="product image" width="400"></img>
-        var desc = <h2 key={index}>{value.DESCRIPTION}</h2>
+        var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
+        var img = <img className="prodImg" src={value.PHOTO} alt="product image"></img>
+        var desc = <h2 className="description" key={index}>
+          {value.DESCRIPTION}
+          <br></br>
+          <br></br>
+          Features:
+          <br></br>
+          <ul>
+            <li className="list">Bluetooth 5.0</li>
+            <br></br>
+            <li className="list">3'' HiFi Full-Range Speakers</li>
+            <br></br>
+            <li className="list">Polyurethane-coated Birch plywood encasing</li>
+          </ul>
+          <br></br>
+          Ships in two weeks.
+          </h2>
         
         var dropList = []
         for(var i = 0; i < (value.LINKS).length; i++)
@@ -128,23 +142,54 @@ class PublicArray extends React.Component {
             dropList.push({value: value.LINKS[i][key][1], label: key, price: value.LINKS[i][key][2]})
           }  
         }
-        var select = <Select onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>
-        var buyNow = <button onClick={e => this.handleClick(index)}>Buy Now</button>
-        items.push([name, img, desc, select, buyNow, "", ""])
+        var select = <Select 
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+            ...theme.colors,
+              text: 'orangered',
+              primary25: 'gray',
+              primary: '#9e84ae ',
+            },
+          })}    
+          className="select" defaultValue={dropList[0]} isSearchable={false} onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>
+        var buyNow = <button className="buyNow" onClick={e => this.handleClick(index)}><center>Buy Now</center></button>
+        items.push([img, name, desc, select, buyNow, dropList[0].value])
         
       }
       
     }
     
     return (
-      <div className="centerDiv">
-
+      <div className="centerDivSpeakers">
+      <br></br>
+      <br></br>
+      <br></br>
        {this.state.inventory.map((price, index) =>
        /*correctly sets it individually to the first value*/
-          <div>
-            <h1>${price[0][1]}</h1>
-            {items[index]}
-          </div>
+      <div>
+          <div className="outline">
+            
+              <center>{items[index][0]}</center>
+              {items[index][1]}
+              {items[index][2]}
+              
+              
+              
+                <h2 className="method">Style + Transportation:</h2>
+                {items[index][3]}
+              
+              <h1 className="price">${price[0][1]}</h1>
+              {items[index][4]}
+            </div>
+          
+            <br></br>
+            <br></br>
+            <br></br>
+        </div>
+          
+          
        )}
       </div>
     )
