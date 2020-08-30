@@ -292,7 +292,6 @@ textarea {
   margin: 0 auto;
   margin-top: 20px;
   display: flex;
-  /*justify-content: space-between;*/
   flex-wrap:wrap;
   padding: 5px;
 }
@@ -457,6 +456,7 @@ textarea {
 .centerDivSpeakers {
   width: 350px;
   margin: 0 auto;
+  margin-top: 20px;
   display: block;
   padding: 0px;
 
@@ -616,6 +616,7 @@ textarea {
 .centerDivSpeakers {
   width: 300px;
   margin: 0 auto;
+  margin-top: 20px;
   display: block;
   padding: 0px;
 }
@@ -623,6 +624,7 @@ textarea {
 .outline {
   width: 292px;
 margin: 0px;
+
  border: 4px solid #9e84ae 
 }
 
