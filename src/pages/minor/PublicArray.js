@@ -161,9 +161,7 @@ class PublicArray extends React.Component {
     
     return (
       <div className="centerDivSpeakers">
-      <br></br>
-      <br></br>
-      <br></br>
+      
        {this.state.inventory.map((price, index) =>
        /*correctly sets it individually to the first value*/
       <div>
