@@ -4,7 +4,7 @@ import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import Select from 'react-select';
 
-const stripePromise = loadStripe(process.env.REACT_APP_SANDBOX_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 var pricesDict = []
 const items = []
 
