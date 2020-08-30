@@ -5,7 +5,6 @@ import { loadStripe } from '@stripe/stripe-js';
 import Select from 'react-select';
 
 const stripePromise = loadStripe(process.env.REACT_APP_SANDBOX_PUBLISHABLE_KEY);
-var update = require('react-addons-update');
 var pricesDict = []
 const items = []
 
@@ -28,12 +27,12 @@ class PublicArray extends React.Component {
   }
   
   returnPrice = (priceId) => {
-    var newArray = []
+
     for(var i = 0; i < (this.state.inventory).length; i++)
     {
       for(var j = 0; j < (this.state.inventory[i]).length; j++)
       {
-        var innerArray = []
+        
         
         if(String(this.state.inventory[i][j][0]) === String(priceId))
         {
@@ -60,10 +59,8 @@ class PublicArray extends React.Component {
 
   componentDidMount()
   {
-    var allProducts = null
     let self = this
-    var tempStruct = []
-    var response = fetch(`/.netlify/functions/allProducts`).then(function(response) {
+    fetch(`/.netlify/functions/allProducts`).then(function(response) {
       return response.json();
       }).then(function(responseJson) {
         self.setState({items: JSON.stringify(responseJson)})
@@ -112,7 +109,7 @@ class PublicArray extends React.Component {
       {
         
         var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
-        var img = <img className="prodImg" src={value.PHOTO} alt="product image"></img>
+        var img = <img className="prodImg" src={value.PHOTO} alt="product"></img>
         var desc = <h2 className="description" key={index}>
           {value.DESCRIPTION}
           <br></br>
@@ -120,13 +117,14 @@ class PublicArray extends React.Component {
           Features:
           <br></br>
           <ul>
-            <li className="list">Bluetooth 5.0</li>
+            <li className="list">- Bluetooth 5.0</li>
             <br></br>
-            <li className="list">3'' HiFi Full-Range Speakers</li>
+            <li className="list">- 3'' HiFi Full-Range Speakers</li>
             <br></br>
-            <li className="list">Polyurethane-coated Birch plywood encasing</li>
+            <li className="list">- Polyurethane-coated Birch plywood encasing</li>
           </ul>
           <br></br>
+          Delivery available in Tallahassee only.<br></br>
           Ships in two weeks.
           </h2>
         
@@ -180,6 +178,10 @@ class PublicArray extends React.Component {
                 <h2 className="method">Style + Transportation:</h2>
                 {items[index][3]}
               
+              <br></br>
+              <br></br>
+              <br></br>
+              <h2 className="total">TOTAL:</h2>
               <h1 className="price">${price[0][1]}</h1>
               {items[index][4]}
             </div>
