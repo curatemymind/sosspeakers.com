@@ -45,6 +45,7 @@ class Navigation extends React.Component {
       <div>
         <Menu width={ 200 } disableAutoFocus>
           <a id="speakers" className={speakerToggle} href="/">SPEAKERS</a>
+          <a id="queue" className={queueToggle} href="/queue">QUEUE</a>
           <a id="contact" className={contactToggle} href="/contact">CONTACT</a>
           <a id="about" className={aboutToggle} href="/about">ABOUT</a>
         </Menu>
@@ -59,6 +60,7 @@ class Navigation extends React.Component {
         <br></br>  
         <ul className="navCont">
           <li><a className={speakerToggle} href="/">SPEAKERS</a></li>
+          <li><a className={queueToggle} href="/queue">QUEUE</a></li>
           <li><a className={contactToggle} href="/contact">CONTACT</a></li>
           <li><a className={aboutToggle} href="/about">ABOUT</a></li>
         </ul>

@@ -37,11 +37,8 @@ class About extends React.Component {
               SOS Speaker, we'll work together to design<br></br>
               a product that is perfect for your desired look. <br></br>
               <br></br>
-              Amplify your sense of self.
+              <b>Amplify your sense of self.</b>
               <br></br>
-              <br></br>
-              Orlando Kenny 
-              <br></br>FREELANCE COLLEGE KID
               </p>
             </div>
             <img src={aboutLogo} alt="thanks!" className="aboutLogo"></img>

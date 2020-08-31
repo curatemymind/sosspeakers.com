@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 
 
+
 /*using react router we set a constant equal to whatever component
 we would like to render*/
 const routing = (

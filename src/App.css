@@ -2,11 +2,25 @@
   font-family: Arial;
  }
 
+ h2 {
+   
+ }
+
+
+ .queueWrapper {
+  width: auto;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
 .contentWrapper {
   width: auto;
   max-width: 1200px;
   height: 700px;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 20px;
   position: relative;
 }
 
@@ -91,6 +105,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding-left: 10px;
 }
 
+
+
 .active-menu-item {
   color: white;
   background-color: #9e84ae;
@@ -102,7 +118,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .menu-item:hover {
-  color: white;
+  color: white !important;
   background-color: gray;
   font-size: 25px;
   font-weight: bold;
@@ -112,7 +128,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 a:link {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:visited {
@@ -120,12 +136,13 @@ a:visited {
 }
 
 a:hover {
+  color: white !important;
   text-decoration: none;
 }
 
 a:active {
   text-decoration: none;
-  background-color: #373a47;
+  background-color: #373a47 !important;
 }
 
 .logo {
@@ -158,7 +175,7 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: gray;
+  background-color: gray !important;
 }
 
 .active-desktop-item {
@@ -278,9 +295,9 @@ textarea {
 }
 
 .aboutHead {
-  margin-top: 30px;
   margin-bottom: 0px;
   margin-left: 10px;
+  font-weight: bolder !important;
 }
 .aboutText {margin-left: 10px; margin-bottom: 0px; margin-top: 0px;}
 
@@ -311,12 +328,14 @@ textarea {
 
 .name {
   font-size: 25px;
+  font-weight: bolder !important;
   margin: 0px;
   margin-left: 15px;
   margin-right: 15px;
 }
 
 .method {
+  font-weight: bolder !important;
   font-size: 20px;
   margin: 0px;
   margin-left: 15px;
@@ -334,6 +353,7 @@ textarea {
 }
 
 .total {
+  font-weight: bolder !important;
   margin: 0px;
   margin-left: 15px;
   margin-right: 15px;
@@ -341,6 +361,7 @@ textarea {
 }
 
 .price {
+  font-weight: bolder !important;
   font-size: 40px;
   margin-top: 0px;
   margin-left: 15px;
@@ -349,7 +370,7 @@ textarea {
 }
 
 .buyNow {
-  width: 350px;
+  width: 342px;
   font-weight: bold;
   background-color: #9e84ae;
   font-size: 30px;
@@ -375,7 +396,11 @@ textarea {
 
 .prodImg
 {
-  width: 350px;
+  width: 342px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: #9e84ae;
 }
 
 
@@ -390,6 +415,10 @@ textarea {
     width: auto;
     height: auto;
     max-height: 570px;
+  }
+
+  .queueWrapper {
+    max-width: 350px;
   }
   textarea {
     width: 270px;
@@ -447,6 +476,7 @@ textarea {
   }
 
   .aboutHead {
+    font-size: 33px;
     margin-left: 0;
   }
 
@@ -463,7 +493,7 @@ textarea {
 }
 
 .outline {
-  width: 342px;
+  width: 350px;
   margin: 0px;
  border: 4px solid #9e84ae 
 }
@@ -551,6 +581,19 @@ textarea {
     height: auto;
     max-height: 570px;
   }
+
+  .queueWrapper {
+    max-width: 280px;
+  }
+
+  th {
+    font-size: 11px;
+    padding: 1px;
+  }
+  td {
+    font-size: 11px;
+    padding: 1px;
+  }
   textarea {
     width: 270px;
     height: 200px;
@@ -607,6 +650,7 @@ textarea {
   }
 
   .aboutHead {
+    font-size: 33px;
     margin-left: 0;
   }
 
@@ -622,7 +666,7 @@ textarea {
 }
 
 .outline {
-  width: 292px;
+  width: 300px;
 margin: 0px;
 
  border: 4px solid #9e84ae 
