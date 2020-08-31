@@ -53,6 +53,10 @@ class Queue extends React.Component {
       <div >
         <Navigation></Navigation>
         <div className="queueWrapper">  
+        <p className="queueText"><b>Note:</b> If you've been redirected here because you recently placed an order,
+          <br></br>
+          you will recieve an email in 3-6 hours notifying you that your item has been queued.
+          </p>
         <Table striped bordered>  
         <thead>
           <tr>
@@ -85,9 +89,6 @@ class Queue extends React.Component {
     )              
   }
 }
-
-  //((String(this.state.rows[index])).split(',')).map((innerValue, innerIndex) =>
-            //((String(this.state.rows[index])).split(','))[innerIndex])
 
 export default Queue;
 

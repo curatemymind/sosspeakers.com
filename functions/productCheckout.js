@@ -6,8 +6,6 @@ exports.handler = async ( event, context) => {
     const price = await stripe.prices.retrieve(
       event.body
     );
-    //pass off the product from previous fnc...
-
 
     const product = await stripe.products.retrieve(
       price.product
@@ -23,7 +21,7 @@ exports.handler = async ( event, context) => {
         quantity: 1,
       }],
       mode: 'payment',
-      success_url: 'https://sosspeakers.com/contact',
+      success_url: 'https://sosspeakers.com/successfulpaymentredirect',
       cancel_url: 'https://sosspeakers.com/',
     });
 
