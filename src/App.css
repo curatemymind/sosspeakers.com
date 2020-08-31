@@ -417,6 +417,11 @@ textarea {
     max-height: 570px;
   }
 
+  .thanks {
+    margin-top: 50px;
+    font-size: 25px;
+  }
+
   .queueWrapper {
     max-width: 350px;
   }
@@ -575,6 +580,12 @@ textarea {
 }
 @media only screen and (min-width: 100px) and (max-width: 349px)
 {
+  .thanks {
+    font-size: 20px;
+  }
+  .queueText {
+    font-size: 12px;
+  }
   .contentWrapper {
     min-width: 325px;
     width: auto;
