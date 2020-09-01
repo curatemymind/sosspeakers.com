@@ -24,7 +24,7 @@ class Navigation extends React.Component {
     var speakerToggle, queueToggle, contactToggle, aboutToggle
     if(isMobile){speakerToggle = "menu-item"; queueToggle = "menu-item"; contactToggle = "menu-item"; aboutToggle = "menu-item"}
     switch (link){
-      default:
+      case '/':
         if(isMobile){speakerToggle = "active-menu-item"}
         else{speakerToggle="active-desktop-item"}
         break
@@ -39,6 +39,8 @@ class Navigation extends React.Component {
       case '/about':
         if(isMobile){aboutToggle = "active-menu-item"}
         else{aboutToggle="active-desktop-item"}
+        break
+      default:
         break
     }
     return isMobile ? (

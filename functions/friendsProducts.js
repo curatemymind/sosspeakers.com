@@ -23,7 +23,7 @@ exports.handler = async ( event, context) => {
     { 
         //console.log(products.data[i].metadata.DISCOUNT)
         //console.log(products.data[i].active)
-        if((products.data[i].active) && (products.data[i].metadata.DISCOUNT === 'NONE'))
+        if((products.data[i].active) && (products.data[i].metadata.DISCOUNT === 'FRIENDS'))
         {
             activeProducts.push(products.data[i])
         }
@@ -33,6 +33,10 @@ exports.handler = async ( event, context) => {
 
     for(var i = 0; i < (activeProducts).length; i++)
     { 
+        //console.log(activeProducts[i].name)
+        //console.log(products.data[i].metadata.DISCOUNT)
+        //console.log(products.data[i].active)
+        
             if((i === 0) || (activeProducts[i].name != activeProducts[i-1].name))
             {
                 for(var j = 0; j < prices.length; j++)
@@ -50,6 +54,7 @@ exports.handler = async ( event, context) => {
                     if(prices[j][activeProducts[i].id])
                     {
                         response[innerIndex].LINKS.push({[activeProducts[i].metadata.TYPE]: [activeProducts[i].id, prices[j][activeProducts[i].id], prices[j].USD]})  
+                        //response[innerIndex].LINKS.push({[products.data[i].metadata.TYPE]: [products.data[i].id, prices[j][products.data[i].id], prices[j].USD]})  
                     }
                 } 
             }
