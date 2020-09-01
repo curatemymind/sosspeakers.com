@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Successful from './pages/Successful'
 import Error from './pages/Error'
+import Friends from './pages/Friends'
 
 
 
@@ -22,6 +23,7 @@ const routing = (
       <Route exact path="/contact" component={Contact}/> 
       <Route exact path="/about" component={About}/>   
       <Route exact path='/successfulpaymentredirect' component={Successful}/>
+      <Route exact path='/friends' component={Friends}/>
       <Route exact path='/*' component={Error}/>
       
     </Switch>
