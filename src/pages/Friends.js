@@ -3,6 +3,8 @@ import '../App.css';
 import Navigation from './minor/Navigation'
 import FriendsArray from './minor/FriendsArray'
 
+const passkey = process.env.REACT_APP_FRIENDS
+
 class Friends extends React.Component { 
 
   //the states of emotion and source will be set to null initially until the user had filled out the form.
@@ -17,8 +19,8 @@ class Friends extends React.Component {
   {
     var password = prompt("Welcome, please enter the password provided...");
 
-    if (password === "testing") {
-      alert("Congratulations, you've gained access! Enjoy the savings ;)")
+    if (password === passkey) {
+      alert("Congratulations, you've gained access! Enjoy the savings and exclusive models ;)")
     }
     else if (password === null) {
       alert("You didn't enter a password. Redirecting you to the home page...")
