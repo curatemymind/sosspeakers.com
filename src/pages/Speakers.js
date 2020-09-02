@@ -22,7 +22,7 @@ class Speakers extends React.Component {
         <Navigation></Navigation>
         <div className="contentWrapper">  
         <PublicArray></PublicArray>
-       
+        <h1 className="foot">Sense of Self Speakers&nbsp;&copy;<br></br><i className="rights">All rights reserved</i></h1>
         </div>
       </div>
     )        

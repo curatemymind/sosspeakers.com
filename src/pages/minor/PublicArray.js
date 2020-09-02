@@ -3,6 +3,8 @@
 import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import Select from 'react-select';
+import Collapsible from 'react-collapsible';
+import './collapsible.scss'; 
 
 const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 var pricesDict = []
@@ -110,7 +112,7 @@ class PublicArray extends React.Component {
         
         var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
         var img = <img className="prodImg" src={value.PHOTO} alt="product"></img>
-        var desc = <h2 className="description" key={index}>
+        var desc = <div><Collapsible key={index} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
           {value.DESCRIPTION}
           <br></br>
           <br></br>
@@ -123,10 +125,14 @@ class PublicArray extends React.Component {
             <br></br>
             <li className="list">- Polyurethane-coated Birch plywood encasing</li>
           </ul>
-          <br></br>
+          
+          
+          </Collapsible>
+          <h2 className="description">
           Delivery available in Tallahassee only.<br></br>
           Ships in two weeks.
           </h2>
+          </div>
         
         var dropList = []
         for(var i = 0; i < (value.LINKS).length; i++)
@@ -169,7 +175,9 @@ class PublicArray extends React.Component {
             
               <center>{items[index][0]}</center>
               {items[index][1]}
+              
               {items[index][2]}
+              
               
               
               
@@ -186,7 +194,7 @@ class PublicArray extends React.Component {
           
             <br></br>
             <br></br>
-            <br></br>
+            
         </div>
           
           

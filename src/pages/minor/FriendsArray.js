@@ -3,6 +3,7 @@
 import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import Select from 'react-select';
+import Collapsible from 'react-collapsible';
 
 const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 var pricesDict = []
@@ -99,100 +100,106 @@ class FriendsArray extends React.Component {
     }
     //DO NOT TOUCH
 
-  render() {
+    render() {
     
-    if(this.state.items != null)
-    {
-      var parsedObj = JSON.parse(this.state.items)
-      
-      for(const [index, value] of parsedObj.entries())
+      if(this.state.items != null)
       {
+        var parsedObj = JSON.parse(this.state.items)
         
-        var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
-        var img = <img className="prodImg" src={value.PHOTO} alt="product"></img>
-        var desc = <h2 className="description" key={index}>
-          {value.DESCRIPTION}
-          <br></br>
-          <br></br>
-          Features:
-          <br></br>
-          <ul>
-            <li className="list">- Bluetooth 5.0</li>
-            <br></br>
-            <li className="list">- 3'' HiFi Full-Range Speakers</li>
-            <br></br>
-            <li className="list">- Polyurethane-coated Birch plywood encasing</li>
-          </ul>
-          <br></br>
-          Delivery available in Tallahassee only.<br></br>
-          Ships in two weeks.
-          </h2>
-        
-        var dropList = []
-        for(var i = 0; i < (value.LINKS).length; i++)
+        for(const [index, value] of parsedObj.entries())
         {
-          for(var key in value.LINKS[i])
+          
+          var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
+          var img = <img className="prodImg" src={value.PHOTO} alt="product"></img>
+          var desc = <div><Collapsible key={index} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
+            {value.DESCRIPTION}
+            <br></br>
+            <br></br>
+            Features:
+            <br></br>
+            <ul>
+              <li className="list">- Bluetooth 5.0</li>
+              <br></br>
+              <li className="list">- 3'' HiFi Full-Range Speakers</li>
+              <br></br>
+              <li className="list">- Polyurethane-coated Birch plywood encasing</li>
+            </ul>
+            
+            
+            </Collapsible>
+            <h2 className="description">
+            Delivery available in Tallahassee only.<br></br>
+            Ships in two weeks.
+            </h2>
+            </div>
+          
+          var dropList = []
+          for(var i = 0; i < (value.LINKS).length; i++)
           {
-            //0 index is ALWAYS product id
-            //1 index is ALWAYS price id
-            //2 index is ALWAYS price
-            pricesDict.push({[value.LINKS[i][key][1]]: value.LINKS[i][key][2]})
-            dropList.push({value: value.LINKS[i][key][1], label: key, price: value.LINKS[i][key][2]})
-          }  
+            for(var key in value.LINKS[i])
+            {
+              //0 index is ALWAYS product id
+              //1 index is ALWAYS price id
+              //2 index is ALWAYS price
+              pricesDict.push({[value.LINKS[i][key][1]]: value.LINKS[i][key][2]})
+              dropList.push({value: value.LINKS[i][key][1], label: key, price: value.LINKS[i][key][2]})
+            }  
+          }
+          var select = <Select 
+            theme={(theme) => ({
+              ...theme,
+              borderRadius: 0,
+              colors: {
+              ...theme.colors,
+                text: 'orangered',
+                primary25: 'gray',
+                primary: '#9e84ae ',
+              },
+            })}    
+            className="select" defaultValue={dropList[0]} isSearchable={false} onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>
+          var buyNow = <button className="buyNow" onClick={e => this.handleClick(index)}><center>Buy Now</center></button>
+          items.push([img, name, desc, select, buyNow, dropList[0].value])
+          
         }
-        var select = <Select 
-          theme={(theme) => ({
-            ...theme,
-            borderRadius: 0,
-            colors: {
-            ...theme.colors,
-              text: 'orangered',
-              primary25: 'gray',
-              primary: '#9e84ae ',
-            },
-          })}    
-          className="select" defaultValue={dropList[0]} isSearchable={false} onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>
-        var buyNow = <button className="buyNow" onClick={e => this.handleClick(index)}><center>Buy Now</center></button>
-        items.push([img, name, desc, select, buyNow, dropList[0].value])
         
       }
       
-    }
-    
-    return (
-      <div className="centerDivSpeakers">
-      
-       {this.state.inventory.map((price, index) =>
-       /*correctly sets it individually to the first value*/
-      <div>
-          <div className="outline">
+      return (
+        <div className="centerDivSpeakers">
+        
+         {this.state.inventory.map((price, index) =>
+         /*correctly sets it individually to the first value*/
+        <div>
+            <div className="outline">
+              
+                <center>{items[index][0]}</center>
+                {items[index][1]}
+                
+                {items[index][2]}
+                
+                
+                
+                
+                  <h2 className="method">Style + Transportation:</h2>
+                  {items[index][3]}
+                
+                <br></br>
+                <br></br>
+                <br></br>
+                <h2 className="total">TOTAL:</h2>
+                <h1 className="price">${price[0][1]}</h1>
+                {items[index][4]}
+              </div>
             
-              <center>{items[index][0]}</center>
-              {items[index][1]}
-              {items[index][2]}
-              
-              
-              
-                <h2 className="method">Style + Transportation:</h2>
-                {items[index][3]}
-              
               <br></br>
               <br></br>
-              <br></br>
-              <h2 className="total">TOTAL:</h2>
-              <h1 className="price">${price[0][1]}</h1>
-              {items[index][4]}
-            </div>
-          
-            <br></br>
-            <br></br>
-            <br></br>
+              
+          </div>
+            
+            
+         )}
         </div>
-          
-          
-       )}
-      </div>
-    )
+      )
+    }
   }
-}
 export default FriendsArray

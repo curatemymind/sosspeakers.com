@@ -330,6 +330,7 @@ textarea {
   font-size: 25px;
   font-weight: bolder !important;
   margin: 0px;
+  margin-top: 10px;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -402,6 +403,23 @@ textarea {
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
   background-color: #9e84ae;
 }
+
+
+.foot {
+  font-size: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.rights {
+  font-size: 20px;
+  text-align: center;
+  color: gray;
+}
+
 
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
@@ -513,6 +531,7 @@ textarea {
 .name {
   font-size: 30px;
   margin: 0px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -576,6 +595,21 @@ textarea {
 .prodImg
 {
   width: 290px;
+}
+
+.foot {
+  font-size: 15px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.rights {
+  font-size: 15px;
+  text-align: center;
+  color: gray;
 }
 }
 @media only screen and (min-width: 100px) and (max-width: 349px)
@@ -693,6 +727,7 @@ margin: 0px;
 .name {
   font-size: 30px;
   margin: 0px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -756,5 +791,20 @@ margin: 0px;
 .prodImg
 {
   width: 290px;
+}
+
+.foot {
+  font-size: 15px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.rights {
+  font-size: 15px;
+  text-align: center;
+  color: gray;
 }
 }

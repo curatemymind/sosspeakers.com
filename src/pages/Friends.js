@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
+
 import FriendsArray from './minor/FriendsArray'
 
 const passkey = process.env.REACT_APP_FRIENDS
