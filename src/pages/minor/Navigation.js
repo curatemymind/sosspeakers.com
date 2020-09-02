@@ -21,8 +21,8 @@ class Navigation extends React.Component {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     const isMobile = Util.IsMobileUserAgent()
     var link = (window.location.href).substr(window.location.href.lastIndexOf('/'))
-    var speakerToggle, queueToggle, contactToggle, aboutToggle
-    if(isMobile){speakerToggle = "menu-item"; queueToggle = "menu-item"; contactToggle = "menu-item"; aboutToggle = "menu-item"}
+    var speakerToggle, queueToggle, contactToggle, aboutToggle, igTooggle
+    if(isMobile){speakerToggle = "menu-item"; queueToggle = "menu-item"; contactToggle = "menu-item"; aboutToggle = "menu-item"; igTooggle = "menu-item"}
     switch (link){
       case '/':
         if(isMobile){speakerToggle = "active-menu-item"}
@@ -40,6 +40,10 @@ class Navigation extends React.Component {
         if(isMobile){aboutToggle = "active-menu-item"}
         else{aboutToggle="active-desktop-item"}
         break
+      case '/ig':
+        if(isMobile){igTooggle = "active-menu-item"}
+        else{igTooggle="active-desktop-item"}
+        break
       default:
         break
     }
@@ -50,6 +54,7 @@ class Navigation extends React.Component {
           <a id="queue" className={queueToggle} href="/queue">QUEUE</a>
           <a id="contact" className={contactToggle} href="/contact">CONTACT</a>
           <a id="about" className={aboutToggle} href="/about">ABOUT</a>
+          <a id="ig" className={igTooggle} href="https://www.instagram.com/sosspeakers/" target='_blank' rel="noopener noreferrer">INSTAGRAM</a>
         </Menu>
         <center><img src={logo} className="logo" alt="SOS"></img></center>
       </div>
@@ -65,6 +70,7 @@ class Navigation extends React.Component {
           <li><a className={queueToggle} href="/queue">QUEUE</a></li>
           <li><a className={contactToggle} href="/contact">CONTACT</a></li>
           <li><a className={aboutToggle} href="/about">ABOUT</a></li>
+          <li><a className={igTooggle} href="https://www.instagram.com/sosspeakers/" target='_blank' rel="noopener noreferrer">INSTAGRAM</a></li>
         </ul>
 
       </div>

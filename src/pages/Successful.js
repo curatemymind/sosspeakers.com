@@ -35,9 +35,6 @@ class Successful extends React.Component {
         <br></br>
         <img src={contactLogo} alt="thanks!" className="contactLogo"></img>
         </center>
-
-
-       
         </div>
       </div>
     )        
