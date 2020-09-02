@@ -42,9 +42,8 @@ class About extends React.Component {
               </p>
             </div>
             <img src={aboutLogo} alt="thanks!" className="aboutLogo"></img>
-          
         </div>
-
+        
         </div>
       </div>
     )               

@@ -419,6 +419,24 @@ textarea {
   font-weight: bold;
 }
 
+.foot2 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.foot3 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
 .rights {
   font-size: 20px;
   text-align: center;
@@ -608,6 +626,26 @@ textarea {
 }
 
 .foot {
+  font-size: 15px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.foot2 {
+  margin-top: 120px;
+  font-size: 15px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.foot3 {
+  margin-top: 120px;
   font-size: 15px;
   padding-bottom: 20px;
   overflow: hidden;
@@ -809,6 +847,26 @@ margin: 0px;
 }
 
 .foot {
+  font-size: 15px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.foot2 {
+  margin-top: 120px;
+  font-size: 15px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #9e84ae;
+  font-weight: bold;
+}
+
+.foot3 {
+  margin-top: 0px;
   font-size: 15px;
   padding-bottom: 20px;
   overflow: hidden;

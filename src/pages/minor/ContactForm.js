@@ -106,7 +106,6 @@ export default class Contact extends React.Component {
           <img src={contactLogo} alt="thanks!" className="contactLogo"></img>
           <h1 className="submitted">thanks!<br></br> your message<br></br> was sent.</h1>  
         </center>
-       
       </div>
     );
   }

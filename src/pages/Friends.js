@@ -40,7 +40,6 @@ class Friends extends React.Component {
         <Navigation></Navigation>
         <div className="contentWrapper">  
         <FriendsArray></FriendsArray>
-       
         </div>
       </div>
     )        
