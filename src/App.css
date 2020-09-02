@@ -391,6 +391,11 @@ textarea {
   outline: 4px solid gray;
 }
 
+.buyNow:active {
+  background-color:  gray;
+  outline: 4px solid  gray;
+}
+
 .list {
   list-style-type: circle;
 }
@@ -584,8 +589,13 @@ textarea {
 }
 
 .buyNow:hover {
-  background-color: gray;
-  outline: 4px solid gray;
+  background-color:  #9e84ae;
+  outline: 4px solid  #9e84ae;
+}
+
+.buyNow:active {
+  background-color:  gray;
+  outline: 4px solid  gray;
 }
 
 .list {
@@ -780,8 +790,13 @@ margin: 0px;
 }
 
 .buyNow:hover {
-  background-color: gray;
-  outline: 4px solid gray;
+  background-color:  #9e84ae;
+  outline: 4px solid  #9e84ae;
+}
+
+.buyNow:active {
+  background-color:  gray;
+  outline: 4px solid  gray;
 }
 
 .list {
