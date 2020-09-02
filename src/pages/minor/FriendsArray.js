@@ -184,8 +184,6 @@ class FriendsArray extends React.Component {
                   {items[index][3]}
                 
                 <br></br>
-                <br></br>
-                <br></br>
                 <h2 className="total">TOTAL:</h2>
                 <h1 className="price">${price[0][1]}</h1>
                 {items[index][4]}
