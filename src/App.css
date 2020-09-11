@@ -402,7 +402,13 @@ textarea {
 
 .prodImg
 {
-  width: 342px;
+ 
+  height: 342px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #9e84ae !important;
 }
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
@@ -622,7 +628,7 @@ textarea {
 
 .prodImg
 {
-  width: 290px;
+  height: 290px;
 }
 
 .foot {
@@ -843,7 +849,7 @@ margin: 0px;
 
 .prodImg
 {
-  width: 290px;
+  height: 290px;
 }
 
 .foot {

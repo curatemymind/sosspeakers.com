@@ -110,7 +110,8 @@ class FriendsArray extends React.Component {
         {
           
           var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
-          var img = <img className="prodImg" src={value.PHOTO} alt="product"></img>
+          var img = <div><img className="prodImg" src={value.PHOTO} alt="product"></img>
+       </div>
           var desc = <div><Collapsible key={index} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
             {value.DESCRIPTION}
             <br></br>

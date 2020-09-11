@@ -4,6 +4,11 @@ import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import Select from 'react-select';
 import Collapsible from 'react-collapsible';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import Slider from "react-slick";
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './collapsible.scss'; 
 
 const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
@@ -22,6 +27,7 @@ class PublicArray extends React.Component {
       selectedOption: null,
       price: null,
       inventory: [],
+    
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -103,17 +109,45 @@ class PublicArray extends React.Component {
 
   render() {
     
+    var settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      fade: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      className: "slides",
+      
+    };
+
     if(this.state.items != null)
     {
       var parsedObj = JSON.parse(this.state.items)
       
       for(const [index, value] of parsedObj.entries())
       {
-        
         var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
-        var img = <img className="prodImg" src={value.PHOTO} alt="product"></img>
+        var img =
+            <Slider {...settings}>
+                <div>
+                    {<img className="prodImg" src={value.PHOTO} alt="product"></img>}
+                </div>
+                <div>
+                    {<img className="prodImg" src={(value.DESCRIPTION).split(" \\n ")[0]}></img>}
+                </div>
+                <div>         
+                    {<img className="prodImg" src={(value.DESCRIPTION).split(" \\n ")[1]}></img>}
+                </div>
+                <div>         
+                    {<img className="prodImg" src={(value.DESCRIPTION).split(" \\n ")[2]}></img>}
+                </div>
+            </Slider>
+            
+            
         var desc = <div><Collapsible key={index} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
-          {value.DESCRIPTION}
+          
+          {(value.DESCRIPTION).split(" \\n ")[3]}
           <br></br>
           <br></br>
           Features:
