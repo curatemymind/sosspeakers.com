@@ -113,13 +113,12 @@ class PublicArray extends React.Component {
       dots: false,
       infinite: false,
       speed: 500,
-      fade: true,
+      fade: false,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
       className: "slides",
-      speed: 3000,
-      cssEase: "linear"
+      
     };
 
     if(this.state.items != null)
@@ -128,7 +127,6 @@ class PublicArray extends React.Component {
       
       for(const [index, value] of parsedObj.entries())
       {
-        
         var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
         var img =
             <Slider {...settings}>
