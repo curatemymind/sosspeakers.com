@@ -22,7 +22,6 @@ const routing = (
       <Route exact path="/contact" component={Contact}/> 
       <Route exact path="/about" component={About}/>   
       <Route exact path='/successfulpaymentredirect' component={Successful}/>
-      <Route exact path='/friends' component={Friends}/>
       <Route exact path='/*' component={Error}/>
       
     </Switch>
