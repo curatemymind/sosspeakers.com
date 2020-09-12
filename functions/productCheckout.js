@@ -21,6 +21,7 @@ exports.handler = async ( event, context) => {
         quantity: 1,
       }],
       mode: 'payment',
+      allow_promotion_codes: true,
       success_url: 'https://sosspeakers.com/successfulpaymentredirect',
       cancel_url: 'https://sosspeakers.com/',
     });
