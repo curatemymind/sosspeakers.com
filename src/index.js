@@ -9,7 +9,6 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Successful from './pages/Successful'
 import Error from './pages/Error'
-import Friends from './pages/Friends'
 
 
 
