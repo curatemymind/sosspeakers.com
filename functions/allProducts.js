@@ -35,11 +35,13 @@ exports.handler = async ( event, context) => {
     { 
             if((i === 0) || (activeProducts[i].name != activeProducts[i-1].name))
             {
+                
                 for(var j = 0; j < prices.length; j++)
                 {
+                    
                     if(prices[j][activeProducts[i].id])
                     {
-                        response.push({NAME: activeProducts[i].name, DESCRIPTION: activeProducts[i].description, PHOTO: activeProducts[i].images[0], PICS:[((activeProducts[i].metadata.PICS).split(" , "))[0], ((activeProducts[i].metadata.PICS).split(" , "))[1], ((activeProducts[i].metadata.PICS).split(" , "))[2]], LINKS: [{[activeProducts[i].metadata.TYPE]: [activeProducts[i].id, prices[j][activeProducts[i].id],  prices[j].USD]}]})
+                        response.push({NAME: activeProducts[i].name, DESCRIPTION: activeProducts[i].description, PHOTO: activeProducts[i].images[0], PICS:[((activeProducts[i].metadata.PICS).split(", "))[0], ((activeProducts[i].metadata.PICS).split(", "))[1], ((activeProducts[i].metadata.PICS).split(", "))[2]], LINKS: [{[activeProducts[i].metadata.TYPE]: [activeProducts[i].id, prices[j][activeProducts[i].id],  prices[j].USD]}]})
                     }
                 } 
             }
@@ -62,6 +64,6 @@ exports.handler = async ( event, context) => {
         
     
     }
-    
+    //return { statusCode : 200 , body : JSON.stringify(prices)};
     return { statusCode : 200 , body : JSON.stringify(response)};
  }
