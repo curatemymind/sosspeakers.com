@@ -299,7 +299,7 @@ textarea {
   margin-left: 10px;
   font-weight: bolder !important;
 }
-.aboutText {margin-left: 10px; margin-bottom: 0px; margin-top: 0px;}
+.aboutText {margin-left: 10px; margin-bottom: 0px; margin-top: 0px; width: 320px;}
 
 .aboutWrap {float: right;}
 
@@ -528,6 +528,7 @@ textarea {
   .aboutText {
     font-size: 15px;
     margin-left: 0px;
+    width: 300px;
   }
 
   .aboutHead {
@@ -749,6 +750,7 @@ textarea {
   .aboutText {
     font-size: 15px;
     margin-left: 0px;
+    width: 280px;
   }
 
   .aboutHead {
