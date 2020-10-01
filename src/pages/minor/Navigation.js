@@ -62,6 +62,7 @@ class Navigation extends React.Component {
     :
     (
       <div>
+        
         <br></br>
         <center><img src={logo} className="logoDesktop" alt="SOS"></img></center>
         <br></br>  

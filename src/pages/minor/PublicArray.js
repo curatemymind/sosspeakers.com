@@ -134,13 +134,13 @@ class PublicArray extends React.Component {
                     {<img className="prodImg" src={value.PHOTO} alt="product"></img>}
                 </div>
                 <div>
-                    {<img className="prodImg" src={(value.PICS)[0]}></img>}
+                    {<img className="prodImg" src={(value.PICS)[0]} alt="product"></img>}
                 </div>
                 <div>         
-                    {<img className="prodImg" src={(value.PICS)[1]}></img>}
+                    {<img className="prodImg" src={(value.PICS)[1]} alt="product"></img>}
                 </div>
                 <div>         
-                    {<img className="prodImg" src={(value.PICS)[2]}></img>}
+                    {<img className="prodImg" src={(value.PICS)[2]} alt="product"></img>}
                 </div>
             </Slider>
             
