@@ -131,9 +131,6 @@ class PublicArray extends React.Component {
         var img =
             <Slider {...settings}>
                 <div>
-                    {<img className="prodImg" src={value.PHOTO} alt="product"></img>}
-                </div>
-                <div>
                     {<img className="prodImg" src={(value.PICS)[0]} alt="product"></img>}
                 </div>
                 <div>         
@@ -141,6 +138,9 @@ class PublicArray extends React.Component {
                 </div>
                 <div>         
                     {<img className="prodImg" src={(value.PICS)[2]} alt="product"></img>}
+                </div>
+                <div>
+                    {<img className="prodImg" src={value.PHOTO} alt="product"></img>}
                 </div>
             </Slider>
             
@@ -159,12 +159,14 @@ class PublicArray extends React.Component {
             <br></br>
             <li className="list">- Polyurethane-coated Birch plywood encasing</li>
           </ul>
+          <br></br>
+          <p>Note: Due to the handmade nature of this product it is non-refundable.</p>
           
           
           </Collapsible>
           <h2 className="description">
           Delivery available in Tallahassee only.<br></br>
-          Ships in two weeks.
+          Ships in three weeks.
           </h2>
           </div>
         
