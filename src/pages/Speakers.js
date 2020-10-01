@@ -26,7 +26,7 @@ class Speakers extends React.Component {
           css={this.state.banner} 
         />  
         <Banner 
-          title="Use the code SOS at checkout for 15% off :)" 
+          title="Use the code SOS at checkout for $30 off :)" 
           css={this.state.banner2} 
         />
         <Navigation></Navigation>
