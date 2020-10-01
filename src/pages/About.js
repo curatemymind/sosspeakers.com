@@ -32,10 +32,10 @@ class About extends React.Component {
               amplifiers, polyurethane-finished Birch wood,<br></br> 
               and high fidelity full range speakers.<br></br>
               <br></br>
-              Every speaker is completely customizable<br></br>
+              Every speaker is completely handmade<br></br>
               from start to finish. Upon ordering a signature<br></br>
-              SOS Speaker, we'll work together to design<br></br>
-              a product that is perfect for your desired look. <br></br>
+              "Sense of Self" Speaker, we'll work together<br></br>
+              to design a speaker that is perfect for your <br></br>desired look. <br></br>
               <br></br>
               <b>Amplify your sense of self.</b>
               <br></br>
