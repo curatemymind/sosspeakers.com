@@ -214,9 +214,6 @@ class PublicArray extends React.Component {
               
               {items[index][2]}
               
-              
-              
-              
                 <h2 className="method">Style + Transportation:</h2>
                 {items[index][3]}
               

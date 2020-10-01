@@ -24,18 +24,21 @@ class About extends React.Component {
         <div className="centerDiv">
           <div className="aboutWrap">
             <h1 className="aboutHead">SENSE OF SELF</h1>
-              <p className="aboutText">Speakers are about expression.<br></br>
+              <p className="aboutText">Speakers are about expression.
               <br></br>
-              SOS Speakers are high quality, beautifully <br></br>
-              encased, and durable sound systems. <br></br>
-              Components include Bluetooth 5.0 enabled<br></br> 
-              amplifiers, polyurethane-finished Birch wood,<br></br> 
-              and high fidelity full range speakers.<br></br>
               <br></br>
-              Every speaker is completely handmade<br></br>
-              from start to finish. Upon ordering a signature<br></br>
-              "Sense of Self" Speaker, we'll work together<br></br>
-              to design a speaker that is perfect for your <br></br>desired look. <br></br>
+              SOS Speakers are high quality, beautifully
+              encased, and durable sound systems.
+              Components include Bluetooth 5.0 enabled
+              amplifiers, polyurethane-finished Birch wood, 
+              and high fidelity full range speakers.
+              <br></br>
+              <br></br>
+              Every speaker is completely handmade
+              from start to finish. Upon ordering a signature
+              "Sense of Self" Speaker, we'll work together
+              to design a speaker that is perfect for your desired look. 
+              <br></br>
               <br></br>
               <b>Amplify your sense of self.</b>
               <br></br>
