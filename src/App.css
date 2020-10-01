@@ -402,8 +402,11 @@ textarea {
 
 .prodImg
 {
- 
-  height: 342px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+ width: auto;
+  height: 290px;
 }
 
 .slick-prev:before,
