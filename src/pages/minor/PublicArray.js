@@ -166,6 +166,7 @@ class PublicArray extends React.Component {
           </Collapsible>
           <h2 className="description">
           Delivery available in Tallahassee only.<br></br>
+          "Bookshelf" type is nonportable.
           Ships in three weeks.
           </h2>
           </div>
