@@ -145,7 +145,7 @@ class PublicArray extends React.Component {
             </Slider>
             
             
-        var desc = <div><Collapsible key={index} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
+        var desc = <div><Collapsible key={index} open={true} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
           
           {value.DESCRIPTION}
           <br></br>
