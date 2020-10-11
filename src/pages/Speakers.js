@@ -21,14 +21,14 @@ class Speakers extends React.Component {
   {  
     return (
       <div>
-        <Banner 
+       {/* <Banner 
           title="Grand Opening Sale!" 
           css={this.state.banner} 
         />  
         <Banner 
           title="Use the code SOS at checkout for $30 off :)" 
           css={this.state.banner2} 
-        />
+       />*/}
         <Navigation></Navigation>
         <div className="contentWrapper">  
         <PublicArray></PublicArray>
