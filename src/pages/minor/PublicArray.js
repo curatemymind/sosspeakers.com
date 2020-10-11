@@ -155,12 +155,14 @@ class PublicArray extends React.Component {
           <ul>
             <li className="list">- Bluetooth 5.0</li>
             <br></br>
+            <li className="list">- 12 Hour Battery Life</li>
+            <br></br>
             <li className="list">- 3'' HiFi Full-Range Speakers</li>
             <br></br>
             <li className="list">- Polyurethane-coated Birch plywood encasing</li>
           </ul>
           <br></br>
-          <p>Note: Due to the handmade nature of this product it is non-refundable.</p>
+          <p>Due to the handmade nature of this product it is non-refundable.</p>
           
           
           </Collapsible>
@@ -169,7 +171,6 @@ class PublicArray extends React.Component {
           10" x 7" x 7" <br></br><br></br>
           Notes: <br></br>
           -  Delivery available in Tallahassee only.<br></br>
-          -  "Bookshelf" type is nonportable.<br></br>
           -  Ships in three weeks.
           </h2>
           </div>
