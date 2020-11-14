@@ -21,8 +21,8 @@ class Navigation extends React.Component {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     const isMobile = Util.IsMobileUserAgent()
     var link = (window.location.href).substr(window.location.href.lastIndexOf('/'))
-    var speakerToggle, queueToggle, contactToggle, aboutToggle, igTooggle
-    if(isMobile){speakerToggle = "menu-item"; queueToggle = "menu-item"; contactToggle = "menu-item"; aboutToggle = "menu-item"; igTooggle = "menu-item"}
+    var speakerToggle, queueToggle, contactToggle, aboutToggle, igTooggle, picsToggle
+    if(isMobile){speakerToggle = "menu-item"; queueToggle = "menu-item"; contactToggle = "menu-item"; aboutToggle = "menu-item"; igTooggle = "menu-item"; picsToggle = "menu-item"}
     switch (link){
       case '/':
         if(isMobile){speakerToggle = "active-menu-item"}
@@ -44,13 +44,18 @@ class Navigation extends React.Component {
         if(isMobile){igTooggle = "active-menu-item"}
         else{igTooggle="active-desktop-item"}
         break
+      case '/photos':
+        if(isMobile){picsToggle = "active-menu-item"}
+        else{picsToggle="active-desktop-item"}
+        break
       default:
         break
     }
     return isMobile ? (
-      <div>
-        <Menu width={ 200 } disableAutoFocus>
+      <div className="full">
+        <Menu width={ 200 } burgerButtonClassName={ "burger" } disableAutoFocus>
           <a id="speakers" className={speakerToggle} href="/">SPEAKERS</a>
+          <a id="about" className={picsToggle} href="/photos">PHOTOS</a>
           <a id="queue" className={queueToggle} href="/queue">QUEUE</a>
           <a id="contact" className={contactToggle} href="/contact">CONTACT</a>
           <a id="about" className={aboutToggle} href="/about">ABOUT</a>
@@ -61,19 +66,18 @@ class Navigation extends React.Component {
     )
     :
     (
-      <div>
-        
+      <div>   
         <br></br>
         <center><img src={logo} className="logoDesktop" alt="SOS"></img></center>
         <br></br>  
         <ul className="navCont">
           <li><a className={speakerToggle} href="/">SPEAKERS</a></li>
+          <li><a className={picsToggle} href="/photos">PHOTOS</a></li>
           <li><a className={queueToggle} href="/queue">QUEUE</a></li>
           <li><a className={contactToggle} href="/contact">CONTACT</a></li>
           <li><a className={aboutToggle} href="/about">ABOUT</a></li>
           <li><a className={igTooggle} href="https://www.instagram.com/sosspeakers/" target='_blank' rel="noopener noreferrer">INSTAGRAM</a></li>
         </ul>
-
       </div>
     )
   }
