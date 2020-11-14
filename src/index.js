@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Successful from './pages/Successful'
 import Error from './pages/Error'
+import Photos from './pages/Photos'
 
 
 
@@ -21,6 +22,7 @@ const routing = (
       <Route exact path="/queue" component={Queue}/>  
       <Route exact path="/contact" component={Contact}/> 
       <Route exact path="/about" component={About}/>   
+      <Route exact path='/photos' component={Photos}/>
       <Route exact path='/successfulpaymentredirect' component={Successful}/>
       <Route exact path='/*' component={Error}/>
       

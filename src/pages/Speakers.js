@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
 import PublicArray from './minor/PublicArray'
-import Banner from 'react-js-banner';
+//import Banner from 'react-js-banner';
 
 class Speakers extends React.Component { 
 

@@ -6,6 +6,20 @@
    
  }
 
+ .full {
+   width: 100vw;
+ }
+
+.burger {
+  color: black !important;
+}
+.burger:hover {
+  color: black !important;
+}
+.burger:active{
+  color: black !important; 
+}
+
 
  .queueWrapper {
   width: auto;
@@ -15,6 +29,20 @@
   margin-top: 20px;
   position: relative;
 }
+
+.photosWrapper {
+  width: auto;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+
+.photo {
+  width: 700px;
+}
+
 .contentWrapper {
   width: auto;
   max-width: 1200px;
@@ -475,6 +503,15 @@ textarea {
   .queueWrapper {
     max-width: 350px;
   }
+
+  .photosWrapper {
+    max-width: 100vw;
+  }
+
+  .photo {
+    width: 100vw;
+  }
+
   textarea {
     width: 270px;
     height: 200px;
@@ -687,6 +724,14 @@ textarea {
 
   .queueWrapper {
     max-width: 280px;
+  }
+
+  .photosWrapper {
+    max-width: 100vw;
+  }
+
+  .photo {
+    width: 100vw;
   }
 
   th {
