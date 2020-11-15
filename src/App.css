@@ -6,6 +6,19 @@
    
  }
 
+ .levine {
+    color: #ec98aa;
+ }
+
+ .levine:hover {
+  color: #ec98aa !important;
+  }
+
+  .levine:active {
+    color: black !important;
+    background-color: #ec98aa !important;
+  }
+
  .full {
    width: 100vw;
  }
@@ -41,6 +54,7 @@
 
 .photo {
   width: 700px;
+  image-orientation: from-image !important;
 }
 
 .contentWrapper {
