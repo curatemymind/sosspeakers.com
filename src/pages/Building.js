@@ -31,7 +31,7 @@ class Building extends React.Component {
         <Clock
           format={'HH:mm:ss'}
           ticking={true}
-          timezone={'US/Pacific'} /></h2>
+          timezone={'US/Eastern'} /></h2>
         </center>
         </div>
       </div>
