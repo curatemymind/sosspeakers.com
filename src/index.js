@@ -10,6 +10,7 @@ import About from './pages/About'
 import Successful from './pages/Successful'
 import Error from './pages/Error'
 import Photos from './pages/Photos'
+import Building from './pages/Building';
 
 
 
@@ -18,7 +19,8 @@ we would like to render*/
 const routing = (
   <Router>
     <Switch>
-      <Route exact path="/" component={Speakers}/>  
+      <Route exact path="/" component={Building}/>  
+      <Route exact path="/admin" component={Speakers}/>  
       <Route exact path="/queue" component={Queue}/>  
       <Route exact path="/contact" component={Contact}/> 
       <Route exact path="/about" component={About}/>   
