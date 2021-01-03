@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
 import Clock from 'react-live-clock';
-const contactLogo = require('./media/contactLogo.png')
+//const contactLogo = require('./media/contactLogo.png')
 
 class Building extends React.Component { 
 

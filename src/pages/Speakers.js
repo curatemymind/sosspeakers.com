@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
-import PublicArray from './minor/PublicArray'
-import Banner from 'react-js-banner';
+//import PublicArray from './minor/PublicArray'
+import Bubble from './minor/bubble';
 
 class Speakers extends React.Component { 
 
@@ -21,18 +21,10 @@ class Speakers extends React.Component {
   {  
     return (
       <div>
-        <Banner 
-          title="BLACK FRIDAY SPECIAL" 
-          css={this.state.banner} 
-        />  
-        <Banner 
-          title='Use code "TURKEY2020" at checkout for $65 off the "Sense of Self" model'
-          css={this.state.banner2} 
-       />
-       
         <Navigation></Navigation>
         <div className="contentWrapper">  
-        <PublicArray></PublicArray>
+        {/*<PublicArray></PublicArray>*/}
+        <Bubble></Bubble>
         </div>
       </div>
     )        

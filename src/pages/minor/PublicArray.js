@@ -3,7 +3,7 @@
 import React from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import Select from 'react-select';
-import Collapsible from 'react-collapsible';
+//import Collapsible from 'react-collapsible';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import Slider from "react-slick";
 // Import css files
@@ -145,34 +145,8 @@ class PublicArray extends React.Component {
             </Slider>
             
             
-        var desc = <div><Collapsible key={index} open={true} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
+        var desc = <div>
           
-          {value.DESCRIPTION}
-          <br></br>
-          <br></br>
-          Features:
-          <br></br>
-          <ul>
-            <li className="list">- Bluetooth 5.0</li>
-            <br></br>
-            <li className="list">- 12 Hour Battery Life</li>
-            <br></br>
-            <li className="list">- 3'' HiFi Full-Range Speakers</li>
-            <br></br>
-            <li className="list">- Polyurethane-coated Birch plywood encasing</li>
-          </ul>
-          <br></br>
-          <p>Due to the handmade nature of this product it is non-refundable.</p>
-          
-          
-          </Collapsible>
-          <h2 className="description">
-          Dimensions: <br></br>
-          10" x 7" x 7" <br></br><br></br>
-          Notes: <br></br>
-          -  Delivery available in Tallahassee only.<br></br>
-          -  Ships in three weeks.
-          </h2>
           </div>
         
         var dropList = []
@@ -212,21 +186,16 @@ class PublicArray extends React.Component {
        {this.state.inventory.map((price, index) =>
        /*correctly sets it individually to the first value*/
       <div>
-          <div className="outline">
-            
-              <center>{items[index][0]}</center>
-              {items[index][1]}
+          <div className="circle">
+            <br></br>
+              <center>{items[index][1]}
+              {items[index][3]}{items[index][0]}
+              
               
               {items[index][2]}
               
-                <h2 className="method">Style + Transportation:</h2>
-                {items[index][3]}
-              
-              <br></br>
-              
-              <h2 className="total">TOTAL:</h2>
               <h1 className="price">${price[0][1]}</h1>
-              {items[index][4]}
+              {items[index][4]}</center>
             </div>
           
             <br></br>

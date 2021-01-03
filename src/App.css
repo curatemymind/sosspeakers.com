@@ -6,6 +6,22 @@
    
  }
 
+ .myBubbleUI {
+	width: 100%;
+  max-width: 100%;
+	height: 700px;
+  border-radius: 50px;
+  
+}
+
+.child {
+	width: 100%;
+	height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 12px  #9e84ae;
+  
+}
+
  .levine {
     color: #ec98aa;
  }
@@ -361,6 +377,15 @@ textarea {
  border: 4px solid #9e84ae 
 }
 
+.circle {
+  border:4px solid #9e84ae; 
+  height:450px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  width:450px;
+}
+
 .select {
   width: 265px;
   margin-left: 15px;
@@ -409,7 +434,7 @@ textarea {
   margin-top: 0px;
   margin-left: 15px;
   margin-right: 15px;
-  color: #9e84ae;
+  color: black;
 }
 
 .buyNow {
@@ -448,7 +473,7 @@ textarea {
   padding-left: 20px;
   padding-right: 20px;
  width: auto;
-  height: 280px;
+  height: 200px;
 }
 
 .slick-prev:before,
