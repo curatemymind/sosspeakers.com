@@ -11,6 +11,8 @@ import Successful from './pages/Successful'
 import Error from './pages/Error'
 import Photos from './pages/Photos'
 import Building from './pages/Building';
+import Bubble from './pages/minor/bubble';
+import myComponent from './pages/test/bub';
 
 
 
@@ -25,6 +27,8 @@ const routing = (
       <Route exact path="/contact" component={Contact}/> 
       <Route exact path="/about" component={About}/>   
       <Route exact path='/photos' component={Photos}/>
+      <Route exact path='/bubble' component={Bubble}/>
+      <Route exact path='/bub' component={myComponent}/>
       <Route exact path='/successfulpaymentredirect' component={Successful}/>
       <Route exact path='/*' component={Error}/>
       
