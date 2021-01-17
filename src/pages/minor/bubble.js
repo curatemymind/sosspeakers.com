@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Select from 'react-select';
 
-const spkrs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+
 
 const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 var pricesDict = []

@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import Navigation from './minor/Navigation'
-//import PublicArray from './minor/PublicArray'
-import Bubble from './minor/bubble';
+import PublicArray from './minor/PublicArray'
+//import Bubble from './minor/bubble';
 
 class Speakers extends React.Component { 
 
@@ -23,8 +23,8 @@ class Speakers extends React.Component {
       <div>
         <Navigation></Navigation>
         <div className="contentWrapper">  
-        {/*<PublicArray></PublicArray>*/}
-        <Bubble></Bubble>
+        <PublicArray></PublicArray>
+        {/*<Bubble></Bubble>*/}
         </div>
       </div>
     )        

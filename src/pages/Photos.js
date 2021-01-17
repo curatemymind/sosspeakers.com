@@ -9,7 +9,8 @@ class Photos extends React.Component {
   constructor() {
     super();
     this.state = {
-      photos: []
+      photos: [],
+      isDoneFetching: false
     };
   }
 
@@ -35,14 +36,16 @@ class Photos extends React.Component {
       }
       self.setState({photos: tempRows}) 
     })  
+    this.setState({isDoneFetching: true})
   }
 
  
 
   render()
   {  
-    return (
-      <div >
+    return this.state.isDoneFetching && (
+       <div >
+        
         <Navigation></Navigation>
         
         <div className="photosWrapper">  
@@ -63,7 +66,7 @@ class Photos extends React.Component {
         </div>
         
       </div>
-    )              
+    )             
   }
 }
 
