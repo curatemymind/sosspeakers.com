@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './collapsible.scss'; 
 import Switch from "react-switch";
+const SOSLineup = require('../media/SOSLineup.png')
+
 
 const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 var pricesDict = []
@@ -201,7 +203,7 @@ class PublicArray extends React.Component {
             </Slider>
             
             
-        var desc = <div><Collapsible key={index} open={true} triggerClassName="Collapsible__trigger" contentInnerClassName="Collapsible__contentInner" trigger="Description">
+        var desc = <div><Collapsible key={index} open={true} triggerDisabled={true} triggerStyle={{display: 'none', padding: '15px'}} contentInnerClassName="Collapsible__contentInner" trigger="">
           
           {value.DESCRIPTION}
           <br></br>
@@ -211,13 +213,12 @@ class PublicArray extends React.Component {
           <ul>
             <li className="list">- Bluetooth 5.0</li>
             <br></br>
-            <li className="list">- 12 Hour Battery Life</li>
+            <li className="list">- 12 Hour Battery Life (Portable Version Only)</li>
             <br></br>
             <li className="list">- 3'' HiFi Full-Range Speakers</li>
             <br></br>
             <li className="list">- Polyurethane-coated Birch plywood encasing</li>
           </ul>
-          <br></br>
           <p>Due to the handmade nature of this product it is non-refundable.</p>
           
           
@@ -292,8 +293,15 @@ class PublicArray extends React.Component {
       <div className="centerDivSpeakers">
         
         {this.state.isDoneFetching && <div>{/*larger array thatll load one speaker view at a time*/}
-
+        
+        <center><h1 className="name">SOS SEASON 2</h1><Collapsible  open={false} triggerClassName="Collapsible__triggerLineup" contentInnerClassName="Collapsible__contentInnerLineup" trigger="LINEUP" ><img src={SOSLineup}></img></Collapsible><h1 className="name">MODELS:</h1></center>
+        
+        
+        
+        
         {speakerSelector[0]}
+
+        
           {/*uniqueSpeakers.map((index) => <div>dsfas{uniqueSpeakers[index].value}</div>)*/}
        
         
@@ -313,7 +321,7 @@ class PublicArray extends React.Component {
               
        <br></br>*/}
               
-              <h2 className="total">TOTAL:</h2>
+              {/*h2 className="total">TOTAL:</h2>*/}
        <h1 className="price">${price[0][1]}</h1>
               {items[index][4]}
             </div>
