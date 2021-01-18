@@ -2,6 +2,7 @@
   font-family: Arial;
  }
 
+
  h2 {
    
  }
@@ -66,7 +67,7 @@
 
 .photosWrapper {
   width: auto;
-  max-width: 700px;
+  max-width: 1000px;
   height: auto;
   margin: 0 auto;
   margin-top: 20px;
@@ -74,7 +75,7 @@
 }
 
 .photo {
-  width: 700px;
+  width: 885px;
   image-orientation: from-image !important;
 }
 
@@ -413,6 +414,11 @@ textarea {
  border: 4px solid #9e84ae 
 }
 
+img {
+  width: 400px;
+  height: auto;
+}
+
 .circle {
   border:4px solid #9e84ae; 
   height:450px;
@@ -431,11 +437,15 @@ textarea {
 }
 
 .selectSpeaker {
+
   width: 350px;
   font-size: 24px;
   margin: 0 auto;
+  margin-top: 10px;
   z-index: 999;
 }
+
+
 
 .css-1uccc91-singleValue {
   margin: 0 auto ;
@@ -445,12 +455,18 @@ textarea {
 
 
 .name {
+  color: #9e84ae;
   font-size: 35px;
   font-weight: bolder !important;
   margin: 0px;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-left: 15px;
   margin-right: 15px;
+  margin-bottom: 0px;
+}
+
+.lineup {
+  display: none !important;
 }
 
 .method {
@@ -461,15 +477,17 @@ textarea {
   margin-right: 15px;
   
 }
+
 .description {
   font-weight: normal;
   font-size: 18px;
   margin: 0px;
   margin-top: 10px;
   margin-left: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-right: 15px;
 }
+
 
 .total {
   font-weight: bolder !important;
@@ -518,12 +536,13 @@ textarea {
   list-style-type: circle;
 }
 
+
 .prodImg
 {
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
- width: auto;
+  width: auto;
   height: 350px;
 }
 
@@ -578,6 +597,7 @@ textarea {
 
 @media only screen and (min-width: 350px) and (max-width: 600px)
 {
+  
   .contentWrapper {
     min-width: 325px;
     width: auto;
@@ -687,6 +707,10 @@ textarea {
   margin-top: 20px;
  border: 4px solid #9e84ae 
 }
+img {
+  width: 320px;
+  height: auto;
+}
 
 .select {
   width: 265px;
@@ -707,6 +731,7 @@ textarea {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .method {
@@ -722,7 +747,7 @@ textarea {
   margin: 0px;
   margin-top: 10px;
   margin-left: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-right: 10px;
 }
 
@@ -734,7 +759,7 @@ textarea {
 }
 
 .price {
-  font-size: 35px;
+  font-size: 45px;
   margin-left: 10px;
   margin-right: 10px;
   color: #9e84ae;
@@ -931,6 +956,11 @@ margin-top: 20px;
  border: 4px solid #9e84ae 
 }
 
+img {
+  width: 250px;
+  height: auto;
+}
+
 .select {
   width: 265px;
   margin-left: 10px;
@@ -949,6 +979,7 @@ margin-top: 20px;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .method {
@@ -964,7 +995,7 @@ margin-top: 20px;
   margin: 0px;
   margin-top: 10px;
   margin-left: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-right: 10px;
 }
 
@@ -976,7 +1007,7 @@ margin-top: 20px;
 }
 
 .price {
-  font-size: 35px;
+  font-size: 45px;
   margin-left: 10px;
   margin-right: 10px;
   color: #9e84ae;
