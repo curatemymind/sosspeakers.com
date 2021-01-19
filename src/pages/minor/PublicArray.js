@@ -67,10 +67,9 @@ class PublicArray extends React.Component {
 
     for(var x = 0; x < allPillButtons.length; x++)
     {
-      // eslint-disable-next-line
+      // enables 'clicked' effect on pill buttons
       if((allPillButtons[x].id).includes(index + ":"))
       {
-        //console.log(allPillButtons[x].id)
         if(allPillButtons[x].id == id)
         {
           allPillButtons[x].style.color = 'white'
@@ -82,11 +81,6 @@ class PublicArray extends React.Component {
           allPillButtons[x].style.backgroundColor = 'white'
         }
       }
-        
-      /*if(allPillButtons[x].id == id)
-      {
-        alert(allPillButtons[x].id)
-      }*/
     }
     //it changes only the productID and price amount
     items[index][5] = productId
@@ -100,9 +94,9 @@ class PublicArray extends React.Component {
     
     var allSpeakerDivs = document.getElementsByClassName('speaker')
 
+    //handles and makes sure that there is only one speaker being shown at a time
     for(var x = 0; x < allSpeakerDivs.length; x++)
     {
-      // eslint-disable-next-line
       if(allSpeakerDivs[x].id == unqSpeakerId)
       {
         allSpeakerDivs[x].style.display = 'block'
@@ -136,11 +130,15 @@ class PublicArray extends React.Component {
         }
         
         self.setState({inventory: finArr})
-      });
+      }).catch(function() {
+        //if fetch fails, reload window to avoid the empty white screen
+        window.location.reload();
+        
+    });;
     }
-    //pass in product id and search for it in item
     
-    //DO NOT TOUCH, this handles checkout through your backend 
+    //DO NOT TOUCH
+    //this handles checkout through my backend 
     async handleClick(index) {
       var buyItem = items[index][5]
       const stripe = await stripePromise
@@ -157,8 +155,10 @@ class PublicArray extends React.Component {
     //DO NOT TOUCH
 
   render() {
+    //temp list of speakers for one by one view
     var tempList = []
     
+    //settings for slideshow on each speaker card
     var settings = {
       dots: false,
       infinite: false,
@@ -168,18 +168,15 @@ class PublicArray extends React.Component {
       slidesToScroll: 1,
       arrows: true,
       className: "slides",
-      
     };
 
-
+    //this if ensures speakers are only added once to the speaker dropdown
     if((this.state.items != null) && (!(this.state.oneTimeFlag)))
     {
       var parsedObj = JSON.parse(this.state.items)
 
-      
       for(const [index, value] of parsedObj.entries())
       {
-
         var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
         
         allSpeakers.push(value.NAME)
@@ -241,28 +238,14 @@ class PublicArray extends React.Component {
             dropList.push({value: value.LINKS[i][key][1], label: key, price: value.LINKS[i][key][2]})
           }  
         }
-        /*var select = <Select 
-          theme={(theme) => ({
-            ...theme,
-            borderRadius: 0,
-            colors: {
-            ...theme.colors,
-              text: 'orangered',
-              primary25: 'gray',
-              primary: '#9e84ae ',
-            },
-          })}    
-          className="select" defaultValue={dropList[0]} isSearchable={false} onChange={(e) => this.handleChange(index, e.value, e.price)} options={dropList}></Select>*/
 
         var select = (dropList.map((option) => <button className="pillButton" id={index + ":" + option.label} style={option.label == dropList[0].label ? {backgroundColor: '#9e84ae', color: 'white'} : {}} onClick={(e) => this.handleChange(index, option.value, option.price, option.label)}>{option.label}<br></br><b className="buttonPrice">${option.price}</b></button>))
         var buyNow = <button className="buyNow" onClick={e => this.handleClick(index)}><center>Buy Now</center></button>
+
         items.push([img, name, desc, select, buyNow, dropList[0].value])
-        
-        
       }
       
       this.setState({oneTimeFlag: true})
-
 
       for(var x = 0; x < allSpeakers.length; x++)
       {
@@ -285,62 +268,44 @@ class PublicArray extends React.Component {
           this.setState({isDoneFetching: true})
     }
 
-    /*INITIALLY HIDE ALL CARDS*/
-
     return (
       <div className="centerDivSpeakers">
-        
+
+        {/*only render view when everything has been loaded*/}
         {this.state.isDoneFetching && <div>{/*larger array thatll load one speaker view at a time*/}
         
-        <center><h1 className="name">SOS SEASON 2</h1><Collapsible  open={false} triggerClassName="Collapsible__triggerLineup" contentInnerClassName="Collapsible__contentInnerLineup" trigger="SHOW LINEUP" triggerWhenOpen="HIDE LINEUP"><img src={SOSLineup}></img></Collapsible><h1 className="name">MODELS:</h1></center>
-        
-        
-        
+        <center>
+          <h1 className="name">SOS SEASON 2</h1>
+          <Collapsible  open={false} triggerClassName="Collapsible__triggerLineup" contentInnerClassName="Collapsible__contentInnerLineup" trigger="SHOW LINEUP" triggerWhenOpen="HIDE LINEUP"><img src={SOSLineup}></img></Collapsible>
+          <h1 className="name">MODELS:</h1>
+        </center>
         
         {speakerSelector[0]}
 
-        
-          {/*uniqueSpeakers.map((index) => <div>dsfas{uniqueSpeakers[index].value}</div>)*/}
-       
-        
-       {this.state.inventory.map((price, index) =>
-       //correctly sets it individually to the first value
-       // eslint-disable-next-line
-      <div className='speaker' id={index} style={index == 0 ? {display: 'block'} : {display:'none'}}> {/*style={{display: 'none' }} style={{display: { this.state.showStore ? 'block' : 'none'} }}*/}
+        {this.state.inventory.map((price, index) =>
 
-          <div className="outline">
-              <center>{items[index][0]}{items[index][3]}</center>
-              
-              
-              {items[index][2]}
-              
-               {/*} <h2 className="method">Style + Transportation:</h2>
-                {items[index][3]}
-              
-       <br></br>*/}
-              
-              {/*h2 className="total">TOTAL:</h2>*/}
-       <h1 className="price">${price[0][1]}</h1>
+          <div className='speaker' id={index} style={index == 0 ? {display: 'block'} : {display:'none'}}> {/*style={{display: 'none' }} style={{display: { this.state.showStore ? 'block' : 'none'} }}*/}
+            <div className="outline">
+              <center>
+                {items[index][0]}{items[index][3]}
+              </center>
+              {items[index][2]} 
+              <h1 className="price">${price[0][1]}</h1>
               {items[index][4]}
             </div>
-          
             <br></br>
-            <br></br>
-            
-        </div>
-          
-          
-       )}
-       </div>}
-       <div className="speakersFooter">
-       <center>
-          <i className="italian">Coded, Designed, and Manufactured from scratch.</i>
-          <br></br>
-          <div className="sosTag"><b>SENSE OF SELF SPEAKERS</b></div>
-          <br></br>
-          <br></br>
-        </center>
-      </div>
+            <br></br>  
+          </div>)}
+          <div className="speakersFooter">
+            <center>
+              <i className="italian">Coded, Designed, and Manufactured from scratch.</i>
+              <br></br>
+              <div className="sosTag"><b>SENSE OF SELF SPEAKERS</b></div>
+              <br></br>
+              <br></br>
+            </center>
+          </div>
+        </div>}
       </div>
     )
   }

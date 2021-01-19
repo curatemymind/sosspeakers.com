@@ -44,27 +44,25 @@ class Photos extends React.Component {
   render()
   {  
     return this.state.isDoneFetching && (
-       <div >
-        
+      <div>
         <Navigation></Navigation>
         
         <div className="photosWrapper">  
-        {this.state.photos.map((value, index) => 
-          <div>
-            <center><img src={value} className="photo" alt="SOS"></img></center>
-            
-          </div>
-          )}
-        <center>
-          <br></br>
-          Stills taken by Matt Levine,
-          <br></br>
-          Photographer and Owner of <a href="https://www.instagram.com/nostalgia_pink/" target="_blank" rel="noopener noreferrer" className="levine">Nostalgia Pink</a>
-          <br></br>
-          <br></br>
-        </center>
+          {this.state.photos.map((value, index) => 
+            <div>
+              <center><img src={value} className="photo" alt="SOS"></img></center>
+              
+            </div>
+            )}
+          <center>
+            <br></br>
+            Stills taken by Matt Levine,
+            <br></br>
+            Photographer and Owner of <a href="https://www.instagram.com/nostalgia_pink/" target="_blank" rel="noopener noreferrer" className="levine">Nostalgia Pink</a>
+            <br></br>
+            <br></br>
+          </center>
         </div>
-        
       </div>
     )             
   }
