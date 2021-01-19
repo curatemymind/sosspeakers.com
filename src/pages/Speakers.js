@@ -54,7 +54,7 @@ class Speakers extends React.Component {
           <b>Portable:</b> This build is meant to go wherever you go! It has a 12-Hour lasting battery built into it.  (Starts at <b>$180</b>)
           <br></br>
           <br></br>
-          I also make speakers that are entirely customized to your liking for an additional <b>$20</b>! ( Select <b>Sense of Self</b> Model)
+          I also make speakers that are entirely customized to your liking for an additional <b>$20</b>! ( Select the <b>Sense of Self</b> Model)
           <br></br>
           <br></br>
           Below I've attached images/videos of the new speakers, happy speaker browsing!
@@ -62,7 +62,7 @@ class Speakers extends React.Component {
           <br></br>
           Orlando Kenny
           <br></br>
-          <i>computer programmer / speaker maker / college kid</i>
+          <i>computer programmer / speaker maker / freelance college kid</i>
           <br></br>
           <br></br>
           <center>

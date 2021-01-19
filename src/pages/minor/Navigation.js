@@ -63,12 +63,10 @@ class Navigation extends React.Component {
         </Menu>
        
         <center>
-        <a href='/admin' className="announcement">ANNOUNCEMENT</a>
-        <br></br>
-        <br></br>
         <img src={logo} className="logo" alt="SOS"></img>
         <br></br>
         <br></br>
+        <a href='/admin' className="announcement">ANNOUNCEMENT</a>
         
         </center>
       </div>
