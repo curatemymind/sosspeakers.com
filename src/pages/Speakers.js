@@ -3,6 +3,7 @@ import '../App.css';
 import Navigation from './minor/Navigation'
 import PublicArray from './minor/PublicArray'
 import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 //import Bubble from './minor/bubble';
 const example1 = require('./media/example1.png')
@@ -69,8 +70,11 @@ class Speakers extends React.Component {
             <img src={example1}></img>
             <img src={example2}></img>
             <iframe src="https://www.youtube.com/embed/iTGErVXtqp8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <Button variant="secondary" onClick={this.hideModal}><b>CLOSE</b></Button>
           </center>
           
+   
+    
           
          </Modal.Body>
           
