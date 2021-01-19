@@ -61,15 +61,29 @@ class Navigation extends React.Component {
           <a id="about" className={aboutToggle} href="/about">ABOUT</a>
           <a id="ig" className={igTooggle} href="https://www.instagram.com/sosspeakers/" target='_blank' rel="noopener noreferrer">INSTAGRAM</a>
         </Menu>
-        <center><img src={logo} className="logo" alt="SOS"></img></center>
+       
+        <center>
+        <a href='/admin' className="announcement">ANNOUNCEMENT</a>
+        <br></br>
+        <br></br>
+        <img src={logo} className="logo" alt="SOS"></img>
+        <br></br>
+        <br></br>
+        
+        </center>
       </div>
     )
     :
     (
       <div>   
         <br></br>
-        <center><img src={logo} className="logoDesktop" alt="SOS"></img></center>
-        <br></br>  
+        <center>
+        
+          <img src={logo} className="logoDesktop" alt="SOS"></img>
+        <br></br> 
+        <br></br> 
+        <a href='/admin' className="announcement">ANNOUNCEMENT</a>
+        </center>
         <ul className="navCont">
           <li><a className={speakerToggle} href="/">SPEAKERS</a></li>
           <li><a className={picsToggle} href="/photos">PHOTOS</a></li>
