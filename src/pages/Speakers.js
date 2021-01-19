@@ -3,6 +3,7 @@ import '../App.css';
 import Navigation from './minor/Navigation'
 import PublicArray from './minor/PublicArray'
 import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 //import Bubble from './minor/bubble';
 const example1 = require('./media/example1.png')
@@ -54,7 +55,7 @@ class Speakers extends React.Component {
           <b>Portable:</b> This build is meant to go wherever you go! It has a 12-Hour lasting battery built into it.  (Starts at <b>$180</b>)
           <br></br>
           <br></br>
-          I also make speakers that are entirely customized to your liking for an additional <b>$20</b>! ( Select <b>Sense of Self</b> Model)
+          I also make speakers that are entirely customized to your liking for an additional <b>$20</b>! ( Select the <b>Sense of Self</b> Model)
           <br></br>
           <br></br>
           Below I've attached images/videos of the new speakers, happy speaker browsing!
@@ -62,15 +63,18 @@ class Speakers extends React.Component {
           <br></br>
           Orlando Kenny
           <br></br>
-          <i>computer programmer / speaker maker / college kid</i>
+          <i>computer programmer / speaker maker / freelance college kid</i>
           <br></br>
           <br></br>
           <center>
             <img src={example1}></img>
             <img src={example2}></img>
             <iframe src="https://www.youtube.com/embed/iTGErVXtqp8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <Button variant="secondary" onClick={this.hideModal}><b>CLOSE</b></Button>
           </center>
           
+   
+    
           
          </Modal.Body>
           

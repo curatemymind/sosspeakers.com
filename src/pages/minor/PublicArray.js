@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './collapsible.scss'; 
 import Switch from "react-switch";
+import { wait } from '@testing-library/react';
 const SOSLineup = require('../media/SOSLineup.png')
 
 
@@ -19,6 +20,8 @@ var uniqueSpeakers = []
 const allSpeakers = []
 const speakerSelector = []
 const pillButtons = []
+
+
 
 
 class PublicArray extends React.Component {
@@ -97,13 +100,19 @@ class PublicArray extends React.Component {
     //handles and makes sure that there is only one speaker being shown at a time
     for(var x = 0; x < allSpeakerDivs.length; x++)
     {
+      var fadeTarget = allSpeakerDivs[x]
       if(allSpeakerDivs[x].id == unqSpeakerId)
       {
+        
+          
+        
         allSpeakerDivs[x].style.display = 'block'
       }
       else
       {
+        
         allSpeakerDivs[x].style.display = 'none'
+       
       }
     }
     

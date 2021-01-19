@@ -2,7 +2,14 @@
   font-family: Arial;
  }
 
+.btn-secondary {
+  font-size: x-large !important;
+  background-color: #9e84ae !important;
+  border-color: #9e84ae !important;
+}
+
 .announcement {
+  
   text-decoration: underline !important;
 }
 
@@ -18,8 +25,8 @@
 
 .announcement:active {
   color: gray !important;
-  background-color: none;
-  text-decoration: none;
+  background-color: none !important;
+  text-decoration: none !important;
 }
  h2 {
    
@@ -28,6 +35,7 @@
 .speaker {
   margin: 0 auto;
   width: 900px;
+  opacity: 1;
   
 }
  .myBubbleUI {
