@@ -137,8 +137,6 @@ class PublicArray extends React.Component {
         
         self.setState({inventory: finArr})
       });
-      this.setState({isDoneFetching: true})
-      
     }
     //pass in product id and search for it in item
     
@@ -174,7 +172,7 @@ class PublicArray extends React.Component {
     };
 
 
-    if((this.state.items != null) && (this.state.isDoneFetching) && (!(this.state.oneTimeFlag)))
+    if((this.state.items != null) && (!(this.state.oneTimeFlag)))
     {
       var parsedObj = JSON.parse(this.state.items)
 
@@ -284,7 +282,7 @@ class PublicArray extends React.Component {
             },
           })}    
           className="selectSpeaker" defaultValue={uniqueSpeakers[0]} isSearchable={false} onChange={(e) => this.handleSpeakerChange(e.speakerId)} options={uniqueSpeakers} ></Select>)
-
+          this.setState({isDoneFetching: true})
     }
 
     /*INITIALLY HIDE ALL CARDS*/
@@ -294,7 +292,7 @@ class PublicArray extends React.Component {
         
         {this.state.isDoneFetching && <div>{/*larger array thatll load one speaker view at a time*/}
         
-        <center><h1 className="name">SOS SEASON 2</h1><Collapsible  open={false} triggerClassName="Collapsible__triggerLineup" contentInnerClassName="Collapsible__contentInnerLineup" trigger="LINEUP" ><img src={SOSLineup}></img></Collapsible><h1 className="name">MODELS:</h1></center>
+        <center><h1 className="name">SOS SEASON 2</h1><Collapsible  open={false} triggerClassName="Collapsible__triggerLineup" contentInnerClassName="Collapsible__contentInnerLineup" trigger="SHOW LINEUP" triggerWhenOpen="HIDE LINEUP"><img src={SOSLineup}></img></Collapsible><h1 className="name">MODELS:</h1></center>
         
         
         
@@ -334,6 +332,15 @@ class PublicArray extends React.Component {
           
        )}
        </div>}
+       <div className="speakersFooter">
+       <center>
+          <i className="italian">Coded, Designed, and Manufactured from scratch.</i>
+          <br></br>
+          <div className="sosTag"><b>SENSE OF SELF SPEAKERS</b></div>
+          <br></br>
+          <br></br>
+        </center>
+      </div>
       </div>
     )
   }

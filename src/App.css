@@ -28,6 +28,14 @@
   
 }
 
+.italian{
+  font-size: 15px;
+}
+.sosTag {
+  color: #9e84ae;
+  font-size: 25px;
+}
+
  .levine {
     color: #ec98aa;
  }
@@ -71,6 +79,15 @@
   height: auto;
   margin: 0 auto;
   margin-top: 20px;
+  position: relative;
+}
+
+.speakersFooter {
+  width: auto;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 0px;
   position: relative;
 }
 
@@ -595,7 +612,7 @@ img {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-@media only screen and (min-width: 350px) and (max-width: 600px)
+@media only screen and (min-width: 350px) and (max-width: 800px)
 {
   
   .contentWrapper {
@@ -837,6 +854,14 @@ img {
 }
 @media only screen and (min-width: 100px) and (max-width: 349px)
 {
+  .italian{
+    font-size: 12px;
+  }
+  .sosTag {
+    color: #9e84ae;
+    font-size: 20px;
+  }
+  
   .thanks {
     font-size: 20px;
   }
@@ -1045,7 +1070,7 @@ img {
 
 .prodImg
 {
-  height: 290px;
+  height: 270px;
 }
 
 .foot {
