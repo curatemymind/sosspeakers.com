@@ -224,7 +224,6 @@ class PublicArray extends React.Component {
             <li className="list">- Polyurethane-coated Birch plywood encasing</li>
           </ul>
           <br></br>
-          <br></br>
           <p>Due to the handmade nature of this product it is non-refundable.</p>
           
           
@@ -306,6 +305,9 @@ class PublicArray extends React.Component {
             </div>
             <br></br>
             <br></br>  
+            <center><iframe src="https://www.youtube.com/embed/WMcUPf_PMHw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+            <br></br>
+  
           </div>)}
           <div className="speakersFooter">
             <center>
