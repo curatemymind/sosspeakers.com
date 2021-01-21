@@ -21,7 +21,7 @@ we would like to render*/
 const routing = (
   <Router>
     <Switch>
-      <Route exact path="/" component={Building}/>  
+      <Route exact path="/" component={Speakers}/>  
       <Route exact path="/admin" component={Speakers}/>  
       <Route exact path="/queue" component={Queue}/>  
       <Route exact path="/contact" component={Contact}/> 

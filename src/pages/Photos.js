@@ -9,8 +9,7 @@ class Photos extends React.Component {
   constructor() {
     super();
     this.state = {
-      photos: [],
-      isDoneFetching: false
+      photos: []
     };
   }
 
@@ -36,37 +35,36 @@ class Photos extends React.Component {
       }
       self.setState({photos: tempRows}) 
     })  
-    this.setState({isDoneFetching: true})
   }
 
  
 
   render()
   {  
-    return this.state.isDoneFetching && (
-      <div>
+    return (
+      <div >
         <Navigation></Navigation>
         
         <div className="photosWrapper">  
-          {this.state.photos.map((value, index) => 
-            <div>
-              <center><img src={value} className="photo" alt="SOS"></img></center>
-              
-            </div>
-            )}
-          <center>
-            <br></br>
-            Stills taken by Matt Levine,
-            <br></br>
-            Photographer and Owner of <a href="https://www.instagram.com/nostalgia_pink/" target="_blank" rel="noopener noreferrer" className="levine">Nostalgia Pink</a>
-            <br></br>
-            <br></br>
-          </center>
+        {this.state.photos.map((value, index) => 
+          <div>
+            <center><img src={value} className="photo" alt="SOS"></img></center>
+            
+          </div>
+          )}
+        <center>
+          <br></br>
+          Stills taken by Matt Levine,
+          <br></br>
+          Photographer and Owner of <a href="https://www.instagram.com/nostalgia_pink/" target="_blank" rel="noopener noreferrer" className="levine">Nostalgia Pink</a>
+          <br></br>
+          <br></br>
+        </center>
         </div>
+        
       </div>
-    )             
+    )              
   }
 }
 
 export default Photos;
-
