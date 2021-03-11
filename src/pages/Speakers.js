@@ -69,7 +69,7 @@ class Speakers extends React.Component {
           <center>
             <img src={example1}></img>
             <img src={example2}></img>
-            <iframe src="https://www.youtube.com/embed/iTGErVXtqp8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br></br>
             <Button variant="secondary" onClick={this.hideModal}><b>CLOSE</b></Button>
           </center>
           
