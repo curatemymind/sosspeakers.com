@@ -189,11 +189,19 @@ class PublicArray extends React.Component {
         var name= (<h1 className="name" key={index}>{value.NAME}</h1>)
         
         allSpeakers.push(value.NAME)
+
+        for(var linkIndex = 0; linkIndex < (value.PICS).length; linkIndex++)
+        {
+          
+          value.PICS[linkIndex] = (value.PICS[linkIndex]).replace("dropbox", "dl.dropboxusercontent");
+        }
         
         var img =
             <Slider {...settings}>
                 <div>
-                    {<img className="prodImg" src={(value.PICS)[0]} alt="product"></img>}
+                  {<img className="prodImg" src={(value.PICS)[0]} alt="product"></img>}
+                
+                  {/*<img class="prodImg" src="//www.dl.dropboxusercontent.com/s/iy9s05hqsbwih2b/frontBack.png?raw=1" alt="product"></img>/*<img className="prodImg" id={{index}} src={(value.PICS)[0]} alt="product"></img>*/}
                 </div>
                 <div>         
                     {<img className="prodImg" src={(value.PICS)[1]} alt="product"></img>}
@@ -249,7 +257,7 @@ class PublicArray extends React.Component {
           }  
         }
 
-        var select = (dropList.map((option) => <button className="pillButton" id={index + ":" + option.label} style={option.label == dropList[0].label ? {backgroundColor: '#9e84ae', color: 'white'} : {}} onClick={(e) => this.handleChange(index, option.value, option.price, option.label)}>{option.label}<br></br><b className="buttonPrice">${option.price}</b></button>))
+        var select = (dropList.map((option) => <button className="pillButton" key={{index}} id={index + ":" + option.label} style={option.label == dropList[0].label ? {backgroundColor: '#9e84ae', color: 'white'} : {}} onClick={(e) => this.handleChange(index, option.value, option.price, option.label)}>{option.label}<br></br><b className="buttonPrice">${option.price}</b></button>))
         var buyNow = <button className="buyNow" onClick={e => this.handleClick(index)}><center>Buy Now</center></button>
 
         items.push([img, name, desc, select, buyNow, dropList[0].value])
@@ -295,17 +303,17 @@ class PublicArray extends React.Component {
         {this.state.inventory.map((price, index) =>
 
           <div className='speaker' id={index} style={index == 0 ? {display: 'block'} : {display:'none'}}> {/*style={{display: 'none' }} style={{display: { this.state.showStore ? 'block' : 'none'} }}*/}
-            <div className="outline">
-              <center>
+            <div className="outline" id={index}>
+              <center id={index}>
                 {items[index][0]}{items[index][3]}
               </center>
               {items[index][2]} 
-              <h1 className="price">${price[0][1]}</h1>
+              <h1 className="price" id={{index}}>${price[0][1]}</h1>
               {items[index][4]}
             </div>
             <br></br>
             <br></br>  
-            <center><iframe src="https://www.youtube.com/embed/WMcUPf_PMHw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+            <center><iframe src="https://www.youtube.com/embed/WMcUPf_PMHw" frameBorder="0" allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></center>
             <br></br>
   
           </div>)}
