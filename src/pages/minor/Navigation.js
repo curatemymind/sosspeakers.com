@@ -63,8 +63,6 @@ class Navigation extends React.Component {
         </Menu>
        
         <center>
-        <a href='/' className="announcement">ANNOUNCEMENTS</a>
-        <br></br>
         <br></br>
         <img src={logo} className="logo" alt="SOS"></img>
         <br></br>
@@ -82,8 +80,6 @@ class Navigation extends React.Component {
         
           <img src={logo} className="logoDesktop" alt="SOS"></img>
         <br></br> 
-        <br></br> 
-        <a href='/' className="announcement">ANNOUNCEMENTS</a>
         </center>
         <ul className="navCont">
           <li><a className={speakerToggle} href="/">SPEAKERS</a></li>

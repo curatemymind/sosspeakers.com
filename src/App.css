@@ -457,6 +457,13 @@ textarea {
  border: 4px solid #9e84ae 
 }
 
+.ytOutline {
+  
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
 .youtube {
   width: 550px;
 }
@@ -760,6 +767,12 @@ iframe {
  border: 4px solid #9e84ae 
 }
 
+.ytOutline {
+  width: 350px;
+  margin: 0px;
+  margin-top: 20px;
+}
+
 .youtube {
   width: 350px;
 }
@@ -1024,6 +1037,12 @@ iframe {
 margin: 0px;
 margin-top: 20px;
  border: 4px solid #9e84ae 
+}
+
+.ytOutline {
+  width: 300px;
+margin: 0px;
+margin-top: 20px; 
 }
 
 .youtube {

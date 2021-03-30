@@ -16,7 +16,7 @@ class Speakers extends React.Component {
   constructor() {
     super();
     this.state = {
-      showModal: true,
+      showModal: false,
     };
     this.showModal = (this.showModal.bind(this))
     this.hideModal = (this.hideModal.bind(this))
@@ -70,6 +70,7 @@ class Speakers extends React.Component {
             <img src={example1}></img>
             <img src={example2}></img>
             <br></br>
+            <br></br>
             <Button variant="secondary" onClick={this.hideModal}><b>CLOSE</b></Button>
           </center>
           
@@ -81,7 +82,7 @@ class Speakers extends React.Component {
 
         </Modal>
         <Navigation></Navigation>
-        <div className="contentWrapper"> 
+        <div className="contentWrapper">
         <PublicArray></PublicArray>
         {/*<Bubble></Bubble>*/}
         </div>
