@@ -29,6 +29,7 @@
     "react-js-banner": "^0.5.2",
     "react-live-clock": "^5.0.13",
     "react-moment": "^1.1.1",
+    "react-native-text-ticker": "^1.12.0",
     "react-responsive-carousel": "^3.2.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",

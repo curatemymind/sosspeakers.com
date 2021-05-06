@@ -54,9 +54,7 @@ class Photos extends React.Component {
           )}
         <center>
           <br></br>
-          Stills taken by Matt Levine,
-          <br></br>
-          Photographer and Owner of <a href="https://www.instagram.com/nostalgia_pink/" target="_blank" rel="noopener noreferrer" className="levine">Nostalgia Pink</a>
+          Stills taken by Matt Levine and Matthew Drake.
           <br></br>
           <br></br>
         </center>
