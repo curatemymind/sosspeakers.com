@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //import Bubble from './minor/bubble';
 const example1 = require('./media/example1.png')
 const example2 = require('./media/example2.png')
-const example3 = require('./media/example3.mp4')
 
 class Speakers extends React.Component { 
 
