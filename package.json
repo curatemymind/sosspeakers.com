@@ -13,6 +13,8 @@
     "http-proxy-middleware": "^1.0.5",
     "jquery": "^3.5.1",
     "moment-timezone": "^0.5.32",
+    "netlify": "^6.1.27",
+    "netlify-cli": "^3.28.0",
     "netlify-lambda": "^2.0.1",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",

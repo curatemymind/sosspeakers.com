@@ -293,9 +293,9 @@ class PublicArray extends React.Component {
         {this.state.isDoneFetching && <div>{/*larger array thatll load one speaker view at a time*/}
         
         <center>
-          <h1 className="name">SEASON 2</h1>
-          <Collapsible  open={false} triggerClassName="Collapsible__triggerLineup" contentInnerClassName="Collapsible__contentInnerLineup" trigger="SHOW LINEUP" triggerWhenOpen="HIDE LINEUP"><img src={SOSLineup}></img></Collapsible>
-          <br></br>
+          {/*<h1 className="name">SEASON 2</h1>*/}
+          {/*<Collapsible  open={false} triggerClassName="Collapsible__triggerLineup" contentInnerClassName="Collapsible__contentInnerLineup" trigger="SHOW LINEUP" triggerWhenOpen="HIDE LINEUP"><img src={SOSLineup}></img></Collapsible>
+          <br></br>*/}
           <h1 className="name">MODELS:</h1>
         </center>
         
