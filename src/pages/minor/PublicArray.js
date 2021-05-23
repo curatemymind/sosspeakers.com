@@ -240,7 +240,7 @@ class PublicArray extends React.Component {
           Dimensions: <br></br>
           11" x 7" x 7" <br></br><br></br>
           
-          <b>Ships in three weeks.</b>
+          <b>Ships in three to six weeks.</b>
           </h2>
           </div>
         
